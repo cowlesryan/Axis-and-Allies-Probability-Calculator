@@ -151,3 +151,9 @@ Where things go when installed: the program in `%LOCALAPPDATA%\Programs\AAOdds`;
 templates that Teach changes, collected panels, taught samples, settings, logs) in `%LOCALAPPDATA%\aaoverlay`, which
 uninstalling keeps. Logs: `%LOCALAPPDATA%\aaoverlay\logs`. Bump `__version__` in `aaoverlay/__init__.py` for a release.
 The build is unsigned, so Windows SmartScreen may warn ("More info" > "Run anyway").
+
+The build leaves out what the app never uses (OpenCV's video library, Qt QML/Quick/PDF/SVG/keyboard modules, Qt
+translations) and stores the bundled dataset with lossless maximum PNG compression: see `packaging_trim.py`. Installed
+size is about 217 MB and the installer about 69 MB. `tests/test_frozen.py` guards this: it runs the app's own
+`--selftest` (OpenCV, NumPy, Qt, calculator, reader, Teach gate) from the exe, the installed app and the source tree and
+requires identical results, runs the exe on real frames, and checks that nothing needed was removed.

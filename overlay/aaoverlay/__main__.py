@@ -42,6 +42,10 @@ def _setup_logging():
 def main():
     if FROZEN:
         _setup_logging()
+    if "--selftest" in sys.argv:  # checks every dependency and writes a JSON report (used by tests/test_frozen.py)
+        from .selftest import run as selftest
+        selftest(sys.argv[sys.argv.index("--selftest") + 1])
+        return
     from .app import run
     ap = argparse.ArgumentParser(description="Battle-odds overlay for Axis & Allies 1942 Online")
     ap.add_argument("--interval", type=float, default=0.4, help="seconds between screen reads")
