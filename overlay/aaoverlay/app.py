@@ -19,7 +19,6 @@ Hotkeys (polled, not registered, so the game still receives its own keys):
     Ctrl+Alt+F10  force a re-read of the panel
     Ctrl+Alt+F12  quit
 """
-import contextlib
 import ctypes
 import sys
 import threading
@@ -39,8 +38,6 @@ from .collect import Collector
 from .custom import CustomBattleWindow, WDA_EXCLUDEFROMCAPTURE
 from .teachwin import TeachWindow
 from .templates import TemplateStore
-from . import windows as W
-from .perf import Perf
 from aa1942.units import AA, army_cost, fmt_army
 
 VK = {"ctrl": 0x11, "alt": 0x12, "f7": 0x76, "f8": 0x77, "f9": 0x78, "f10": 0x79, "f11": 0x7A, "f12": 0x7B}
@@ -54,106 +51,52 @@ class ReaderThread(QThread):
     """Reads the attack panel from the live screen (or a fixed image for tests)."""
     reading = Signal(object)
 
-    IDLE_INTERVAL = 0.8   # with no panel on screen for a while the screen is looked at less often
-    IDLE_AFTER = 5        # consecutive reads without a panel before slowing down
-    SAME_PIXELS = 2       # the panel region counts as unchanged when no pixel differs by more than this
-
-    def __init__(self, interval=0.6, image_path=None, debug=False, perf=None):
+    def __init__(self, interval=0.6, image_path=None, debug=False):
         super().__init__()
-        self.interval, self.image_path, self.debug, self.perf = interval, image_path, debug, perf
+        self.interval, self.image_path, self.debug = interval, image_path, debug
         self.force = threading.Event()
         self.reload = threading.Event()   # set after templates changed on disk (teach / undo)
-
-    def _timed(self, name):
-        return self.perf.timer(name) if self.perf else contextlib.nullcontext()
-
-    @staticmethod
-    def _region(shot_shape, mon, panel):
-        """The screen rectangle (monitor-local ``(x0, y0, x1, y1)`` and global ``mss`` dict) of ``panel``."""
-        s = shot_shape[0] / panel.frame.shape[0]
-        x0, y0, x1, y1 = (int(v * s) for v in W.crop_box(panel.frame, panel))
-        x1, y1 = min(x1, shot_shape[1]), min(y1, shot_shape[0])
-        return (x0, y0, x1, y1), {"left": mon["left"] + x0, "top": mon["top"] + y0, "width": x1 - x0,
-                                  "height": y1 - y0}
-
-    def _unchanged_panel(self, sct, cached):
-        """The previous panel when the pixels around it are unchanged (so reading it again would give the same
-        answer), else ``None``. Costs one small grab instead of a full-screen grab and read."""
-        panel, rect, pixels = cached
-        with self._timed("region"):
-            try:
-                now = np.array(sct.grab(rect))[:, :, :3]
-                same = now.shape == pixels.shape and int(cv2.absdiff(now, pixels).max()) <= self.SAME_PIXELS
-            except Exception as exc:  # the shortcut failing must only cost speed: read the whole screen instead
-                print(f"[reader] region check failed: {exc!r}", file=sys.stderr)
-                same = False
-        return panel if same else None
 
     def run(self):
         import mss
         store = TemplateStore()
         fixed = cv2.imread(self.image_path) if self.image_path else None
         sct = None if fixed is not None else mss.mss()
-        cached = None        # (panel, global grab rect, its pixels) of the last live panel
-        no_panel_streak = 0
         try:
             while not self.isInterruptionRequested():
                 if self.reload.is_set():
                     store.load()
                     self.reload.clear()
-                    cached = None
-                panel, from_cache = None, False
-                if cached is not None:
-                    panel = self._unchanged_panel(sct, cached)
-                    from_cache = panel is not None
-                if not from_cache:
-                    cached = None
-                    with self._timed("grab"):
-                        shot = fixed if fixed is not None else np.array(sct.grab(sct.monitors[1]))[:, :, :3]
-                    t0 = time.monotonic()
-                    try:
-                        with self._timed("read"):
-                            panel = R.read_panel(shot, store)
-                    except Exception as exc:  # never let a bad frame kill the reader
-                        panel = None
-                        print(f"[reader] error: {exc!r}", file=sys.stderr)
-                    if self.debug:
-                        print(f"[reader] {'panel' if panel else 'no panel'} in {1000 * (time.monotonic() - t0):.0f} ms")
-                    if panel is not None and fixed is None:
-                        try:
-                            (x0, y0, x1, y1), rect = self._region(shot.shape, sct.monitors[1], panel)
-                            cached = (panel, rect, shot[y0:y1, x0:x1].copy())
-                        except Exception:  # no region, no shortcut: every tick reads the whole screen as before
-                            cached = None
-                elif self.debug:
-                    print("[reader] panel region unchanged")
+                if fixed is not None:
+                    shot = fixed
+                else:
+                    shot = np.array(sct.grab(sct.monitors[1]))[:, :, :3]
+                t0 = time.monotonic()
+                try:
+                    panel = R.read_panel(shot, store)
+                except Exception as exc:  # never let a bad frame kill the reader
+                    panel = None
+                    print(f"[reader] error: {exc!r}", file=sys.stderr)
+                if self.debug:
+                    print(f"[reader] {'panel' if panel else 'no panel'} in {1000 * (time.monotonic() - t0):.0f} ms")
                 self.reading.emit(panel)
-                no_panel_streak = 0 if panel is not None else no_panel_streak + 1
-                wait = self.idle_interval() if no_panel_streak >= self.IDLE_AFTER else self.interval
                 waited = 0.0
-                while waited < wait and not self.force.is_set() and not self.isInterruptionRequested():
+                while waited < self.interval and not self.force.is_set() and not self.isInterruptionRequested():
                     self.msleep(30)
                     waited += 0.03
-                if self.force.is_set():
-                    cached = None  # F10: read the whole screen again
-                    no_panel_streak = 0
                 self.force.clear()
         finally:
             if sct is not None:
                 sct.close()
-
-    def idle_interval(self):
-        return max(self.interval, self.IDLE_INTERVAL)
 
 
 class SolverThread(QThread):
     """Runs the newest compute job; older jobs are cancelled."""
     result = Signal(dict)
 
-    def __init__(self, exact_seconds, perf=None):
+    def __init__(self, exact_seconds):
         super().__init__()
         self.exact_seconds = exact_seconds
-        self.perf = perf
         self._job = None
         self._job_id = 0
         self._lock = threading.Lock()
@@ -178,16 +121,8 @@ class SolverThread(QThread):
                 continue
             job_id, att, dfn = job
             try:
-                t0 = time.perf_counter()
-
-                def emit(r, j=job_id):
-                    if self.perf:
-                        self.perf.record("solve:" + r.get("stage", "?"), 1000 * (time.perf_counter() - t0))
-                    self.result.emit({**r, "job": j})
-
-                service.compute(att, dfn, emit, exact_seconds=self.exact_seconds,
-                                spread_delay=service.LIVE_SPREAD_DELAY_SECONDS,
-                                spread_budget=service.LIVE_SPREAD_BUDGET_SECONDS)
+                service.compute(att, dfn, lambda r, j=job_id: self.result.emit({**r, "job": j}),
+                                exact_seconds=self.exact_seconds)
             except Exception as exc:  # e.g. a reading the calculator rejects: say so, and keep the thread alive
                 self.result.emit({"job": job_id, "error": str(exc) or type(exc).__name__, "outcomes": None})
 
@@ -253,9 +188,8 @@ class Controller:
     def __init__(self, app, opts):
         self.opts = opts
         self.overlay = Overlay(exclude_from_capture=not opts.no_exclude)
-        self.perf = Perf() if getattr(opts, "perf", False) else None
-        self.reader = ReaderThread(opts.interval, opts.image, opts.debug, self.perf)
-        self.solver = SolverThread(opts.exact_seconds, self.perf)
+        self.reader = ReaderThread(opts.interval, opts.image, opts.debug)
+        self.solver = SolverThread(opts.exact_seconds)
         self.visible = True
         self.last_armies = None
         self.collector = Collector(enabled=True if getattr(opts, "collect", False) else None)
@@ -277,22 +211,9 @@ class Controller:
         self.timer = QTimer()
         self.timer.timeout.connect(self.poll_keys)
         self.timer.start(60)
-        if self.perf:
-            self._stall_t = time.monotonic()
-            self.stall_timer = QTimer()          # how late the GUI thread runs a 20 ms tick = how long it was blocked
-            self.stall_timer.timeout.connect(self._tick_stall)
-            self.stall_timer.start(20)
-            self.report_timer = QTimer()
-            self.report_timer.timeout.connect(lambda: print(self.perf.report(), flush=True))
-            self.report_timer.start(5000)
         self.app = app
         self.reader.start()
         self.solver.start()
-
-    def _tick_stall(self):
-        now = time.monotonic()
-        self.perf.record("gui_stall", max(0.0, 1000 * (now - self._stall_t) - 20))
-        self._stall_t = now
 
     # -- panel readings -------------------------------------------------------
     def last_panel_armies(self):
@@ -413,19 +334,7 @@ class Controller:
         self.app.quit()
 
 
-def lower_priority():
-    """Run below normal priority so the game always gets the CPU first (the overlay is a background helper)."""
-    BELOW_NORMAL_PRIORITY_CLASS = 0x4000
-    k32 = ctypes.windll.kernel32
-    k32.GetCurrentProcess.restype = ctypes.c_void_p
-    k32.SetPriorityClass.argtypes = [ctypes.c_void_p, ctypes.c_uint32]
-    return bool(k32.SetPriorityClass(k32.GetCurrentProcess(), BELOW_NORMAL_PRIORITY_CLASS))
-
-
 def run(opts):
-    if not getattr(opts, "normal_priority", False):
-        lower_priority()
-    cv2.setNumThreads(2)  # OpenCV defaults to one thread per core: about 20% more CPU per read for 5 ms of speed
     app = QApplication(sys.argv[:1])
     app.setQuitOnLastWindowClosed(False)
     ctl = Controller(app, opts)
