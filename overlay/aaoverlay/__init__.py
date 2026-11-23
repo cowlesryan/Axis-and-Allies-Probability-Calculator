@@ -12,7 +12,10 @@ never touches the game's files or process.
 import os
 import sys
 
-# The calculator package (aa1942) lives one folder above this project.
-_PARENT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-if _PARENT not in sys.path:
-    sys.path.insert(0, _PARENT)
+__version__ = "0.1.0"
+
+# The calculator package (aa1942) lives one folder above this project (the packaged app bundles it instead).
+if not getattr(sys, "frozen", False):
+    _PARENT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    if _PARENT not in sys.path:
+        sys.path.insert(0, _PARENT)

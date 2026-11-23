@@ -11,9 +11,10 @@ import os
 import cv2
 import numpy as np
 
+from .paths import bundle_dir
 from .reader import BASE_H, PANEL_GREY
 
-ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "dataset")
+ROOT = os.path.join(bundle_dir(), "dataset")
 RAW = os.path.join(ROOT, "raw")
 CANVAS_W = 2560
 

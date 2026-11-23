@@ -19,17 +19,11 @@ import cv2
 
 from . import reader as R
 from . import windows as W
+from .paths import data_dir  # noqa: F401  (re-exported: tests and the Teach window use ``collect.data_dir``)
 
 MAX_ITEMS = 150
 MIN_GAP_SECONDS = 4.0
 BORDERLINE = 0.12   # an icon matched within this margin above the reader's minimum score counts as borderline
-
-
-def data_dir():
-    root = os.environ.get("AAOVERLAY_DATA") or os.path.join(
-        os.environ.get("LOCALAPPDATA") or os.path.expanduser("~"), "aaoverlay")
-    os.makedirs(root, exist_ok=True)
-    return root
 
 
 def _settings_path():

@@ -139,3 +139,15 @@ can teach it, safely:
 
 Online games have no save file to check against, so the reader never labels anything itself: no label, no learning.
 See [TEACH_PLAN.md](TEACH_PLAN.md).
+
+
+## Installer (for friends)
+`powershell -File build.ps1` runs the tests, builds the app with PyInstaller (`aaoverlay.spec`) and compiles
+`installer.iss` with Inno Setup into `%USERPROFILE%\aaoverlay-build\installer\AAOdds-<version>-setup.exe` (about 90 MB).
+It installs per user (no admin rights) and can add a desktop shortcut or start with Windows. Needs Windows 10 2004+,
+the game on the primary 16:9 monitor. Setup tools: `pip install pyinstaller` in the venv and Inno Setup 6.
+
+Where things go when installed: the program in `%LOCALAPPDATA%\Programs\AAOdds`; your data (a writable copy of the
+templates that Teach changes, collected panels, taught samples, settings, logs) in `%LOCALAPPDATA%\aaoverlay`, which
+uninstalling keeps. Logs: `%LOCALAPPDATA%\aaoverlay\logs`. Bump `__version__` in `aaoverlay/__init__.py` for a release.
+The build is unsigned, so Windows SmartScreen may warn ("More info" > "Run anyway").

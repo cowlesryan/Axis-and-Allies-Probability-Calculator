@@ -1,10 +1,48 @@
 """Entry point: ``python -m aaoverlay`` (run from the overlay folder, using .venv)."""
 import argparse
 
-from .app import run
+import os
+import sys
+import time
+import traceback
+
+from . import __version__
+from .paths import FROZEN, data_dir
+
+
+def _setup_logging():
+    """The packaged app has no console: send output to a log file and record unhandled errors there."""
+    folder = os.path.join(data_dir(), "logs")
+    os.makedirs(folder, exist_ok=True)
+    logs = sorted(f for f in os.listdir(folder) if f.endswith(".log"))
+    for old in logs[:-4]:  # keep the last few
+        try:
+            os.remove(os.path.join(folder, old))
+        except OSError:
+            pass
+    path = os.path.join(folder, time.strftime("overlay_%Y%m%d_%H%M%S.log"))
+    log = open(path, "w", buffering=1, encoding="utf-8")
+    sys.stdout = sys.stderr = log
+
+    def hook(kind, exc, tb):
+        traceback.print_exception(kind, exc, tb, file=log)
+        try:  # one visible message, since nobody is watching a console
+            import ctypes
+            ctypes.windll.user32.MessageBoxW(
+                0, f"The overlay hit an unexpected error and will close.\n\nDetails were saved to:\n{path}",
+                "A&A odds overlay", 0x10)
+        except Exception:
+            pass
+
+    sys.excepthook = hook
+    print(f"A&A odds overlay {__version__}", file=log)
+    return path
 
 
 def main():
+    if FROZEN:
+        _setup_logging()
+    from .app import run
     ap = argparse.ArgumentParser(description="Battle-odds overlay for Axis & Allies 1942 Online")
     ap.add_argument("--interval", type=float, default=0.4, help="seconds between screen reads")
     ap.add_argument("--exact-seconds", type=float, default=8.0, help="exact-solve budget before estimating")

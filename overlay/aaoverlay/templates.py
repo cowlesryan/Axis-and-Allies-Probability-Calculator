@@ -11,11 +11,31 @@ Icons are matched by silhouette overlap (IoU) after cropping to the bounding
 box and resizing to a fixed canvas, so they are independent of screen scale.
 """
 import os
+import shutil
 
 import cv2
 import numpy as np
 
-ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "templates")
+from .paths import FROZEN, data_dir
+
+BUNDLED = os.path.join(os.path.dirname(os.path.abspath(__file__)), "templates")
+
+
+def _working_copy():
+    """The packaged app cannot write beside its own files (``Program Files``, updates), so Teach works on a copy in
+    the user's data folder. Seed templates missing from the copy are added; icons the user taught are never touched."""
+    root = os.path.join(data_dir(), "templates")
+    for sub in ("icons", "digits"):
+        os.makedirs(os.path.join(root, sub), exist_ok=True)
+        src = os.path.join(BUNDLED, sub)
+        for name in os.listdir(src) if os.path.isdir(src) else []:
+            dst = os.path.join(root, sub, name)
+            if not os.path.exists(dst):
+                shutil.copyfile(os.path.join(src, name), dst)
+    return root
+
+
+ROOT = _working_copy() if FROZEN else BUNDLED
 ICON_SIZE = 48
 DIGIT_W, DIGIT_H = 20, 32
 
