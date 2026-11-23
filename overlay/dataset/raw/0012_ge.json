@@ -1,0 +1,72 @@
+{
+ "name": "0012_ge",
+ "tag": "ge",
+ "captured": "2026-11-23 03:37:18",
+ "crop_box_1440p": [
+  491,
+  414,
+  1147,
+  831
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 818,
+  "bounds": [
+   531,
+   524,
+   1107,
+   711
+  ],
+  "dice": [
+   [
+    null,
+    2
+   ],
+   [
+    4,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "sea_zone_9",
+  "attacker_power": "germany",
+  "defender_powers": [
+   "soviet_union",
+   "united_states"
+  ],
+  "attackers": {
+   "bb": 1
+  },
+  "defenders": {
+   "des": 31,
+   "bb": 37
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {
+    "trn": 2
+   }
+  },
+  "panel_aa": 0
+ },
+ "reader": {
+  "attackers": {
+   "bb": 1
+  },
+  "defenders": {
+   "bb": 37
+  },
+  "warnings": [
+   "defender: unrecognised icon at x=894,y=524 (best score 0.45)",
+   "defender: skipped an unreadable entry in the die-2 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795422718888",
+  "target": "sea_zone_9"
+ }
+}

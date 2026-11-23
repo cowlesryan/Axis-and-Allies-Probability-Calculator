@@ -1,0 +1,85 @@
+{
+ "name": "0093_am-uk",
+ "tag": "am-uk",
+ "captured": "2026-11-23 10:09:13",
+ "crop_box_1440p": [
+  1528,
+  520,
+  2184,
+  1195
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1854,
+  "bounds": [
+   1568,
+   759,
+   2144,
+   1075
+  ],
+  "dice": [
+   [
+    1,
+    null
+   ],
+   [
+    3,
+    null
+   ],
+   [
+    null,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "malaya",
+  "attacker_power": "united_kingdom",
+  "amphibious": {
+   "tank": 1,
+   "inf": 3
+  },
+  "bombarders": {},
+  "bombard_slots": 4,
+  "defender_powers": [
+   "japan"
+  ],
+  "attackers": {
+   "tank": 1,
+   "inf": 3
+  },
+  "defenders": {
+   "ftr": 2
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "japan",
+    "ftr",
+    2
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "inf": 3,
+   "tank": 1
+  },
+  "defenders": {
+   "ftr": 2
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795446447997",
+  "target": "malaya"
+ }
+}

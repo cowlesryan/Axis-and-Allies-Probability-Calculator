@@ -1,0 +1,69 @@
+{
+ "name": "0077_uk2",
+ "tag": "uk2",
+ "captured": "2026-11-23 09:36:04",
+ "crop_box_1440p": [
+  1036,
+  235,
+  1692,
+  525
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1362,
+  "bounds": [
+   1076,
+   345,
+   1652,
+   405
+  ],
+  "dice": [
+   [
+    4,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "west_russia",
+  "attacker_power": "united_kingdom",
+  "defender_powers": [
+   "japan"
+  ],
+  "attackers": {
+   "bmb": 3
+  },
+  "defenders": {
+   "ftr": 4
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "japan",
+    "ftr",
+    4
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "bmb": 3
+  },
+  "defenders": {
+   "ftr": 4
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795443441156",
+  "target": "west_russia"
+ }
+}

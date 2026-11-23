@@ -1,0 +1,69 @@
+{
+ "name": "0065_so2",
+ "tag": "so2",
+ "captured": "2026-11-23 09:29:31",
+ "crop_box_1440p": [
+  693,
+  183,
+  1349,
+  473
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1020,
+  "bounds": [
+   733,
+   293,
+   1309,
+   353
+  ],
+  "dice": [
+   [
+    2,
+    2
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "sea_zone_6",
+  "attacker_power": "soviet_union",
+  "defender_powers": [
+   "germany"
+  ],
+  "attackers": {
+   "des": 4
+  },
+  "defenders": {
+   "car": 5
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "germany",
+    "car",
+    5
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "des": 4
+  },
+  "defenders": {
+   "car": 5
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795443461603",
+  "target": "sea_zone_6"
+ }
+}

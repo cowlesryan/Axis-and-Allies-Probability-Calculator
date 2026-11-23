@@ -1,0 +1,100 @@
+{
+ "name": "0090_am-uk",
+ "tag": "am-uk",
+ "captured": "2026-11-23 10:08:56",
+ "crop_box_1440p": [
+  666,
+  392,
+  1322,
+  1195
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 993,
+  "bounds": [
+   706,
+   631,
+   1282,
+   1075
+  ],
+  "dice": [
+   [
+    1,
+    1
+   ],
+   [
+    null,
+    2
+   ],
+   [
+    3,
+    null
+   ],
+   [
+    4,
+    null
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "algeria",
+  "attacker_power": "united_kingdom",
+  "amphibious": {
+   "inf": 2
+  },
+  "bombarders": {
+   "bb": 1,
+   "cru": 1
+  },
+  "bombard_slots": 2,
+  "defender_powers": [
+   "germany"
+  ],
+  "attackers": {
+   "inf": 2,
+   "bb": 1,
+   "cru": 1
+  },
+  "defenders": {
+   "bmb": 1,
+   "inf": 2
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "germany",
+    "bmb",
+    1
+   ],
+   [
+    "germany",
+    "inf",
+    2
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "inf": 2,
+   "cru": 1,
+   "bb": 1
+  },
+  "defenders": {
+   "inf": 2,
+   "bmb": 1
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795446447997",
+  "target": "algeria"
+ }
+}

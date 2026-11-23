@@ -1,0 +1,93 @@
+{
+ "name": "0106_am-ge",
+ "tag": "am-ge",
+ "captured": "2026-11-23 10:42:04",
+ "crop_box_1440p": [
+  391,
+  732,
+  1158,
+  1278
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 831,
+  "bounds": [
+   431,
+   842,
+   1118,
+   1158
+  ],
+  "dice": [
+   [
+    2,
+    2
+   ],
+   [
+    3,
+    null
+   ],
+   [
+    4,
+    null
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "gibraltar",
+  "attacker_power": "germany",
+  "amphibious": {
+   "art": 1,
+   "inf": 1
+  },
+  "bombarders": {
+   "bb": 2
+  },
+  "bombard_slots": 2,
+  "defender_powers": [
+   "united_kingdom"
+  ],
+  "attackers": {
+   "art": 1,
+   "inf": 1,
+   "ftr": 2,
+   "bmb": 1,
+   "bb": 2
+  },
+  "defenders": {
+   "inf": 12
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "united_kingdom",
+    "inf",
+    12
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "inf": 1,
+   "art": 1,
+   "ftr": 2,
+   "bmb": 1,
+   "bb": 2
+  },
+  "defenders": {
+   "inf": 12
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795446451632",
+  "target": "gibraltar"
+ }
+}

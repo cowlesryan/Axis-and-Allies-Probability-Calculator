@@ -1,0 +1,88 @@
+{
+ "name": "0105_am-ge",
+ "tag": "am-ge",
+ "captured": "2026-11-23 10:41:19",
+ "crop_box_1440p": [
+  908,
+  743,
+  1675,
+  1289
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1348,
+  "bounds": [
+   948,
+   853,
+   1635,
+   1169
+  ],
+  "dice": [
+   [
+    2,
+    null
+   ],
+   [
+    null,
+    3
+   ],
+   [
+    4,
+    null
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "caucasus",
+  "attacker_power": "germany",
+  "amphibious": {
+   "art": 1
+  },
+  "bombarders": {
+   "bb": 1
+  },
+  "bombard_slots": 1,
+  "defender_powers": [
+   "soviet_union"
+  ],
+  "attackers": {
+   "art": 1,
+   "bmb": 1,
+   "bb": 1
+  },
+  "defenders": {
+   "tank": 2
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "soviet_union",
+    "tank",
+    2
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "art": 1,
+   "bmb": 1,
+   "bb": 1
+  },
+  "defenders": {
+   "tank": 2
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795446451632",
+  "target": "caucasus"
+ }
+}

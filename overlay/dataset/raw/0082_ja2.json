@@ -1,0 +1,71 @@
+{
+ "name": "0082_ja2",
+ "tag": "ja2",
+ "captured": "2026-11-23 09:37:54",
+ "crop_box_1440p": [
+  1456,
+  865,
+  2223,
+  1155
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1895,
+  "bounds": [
+   1496,
+   975,
+   2183,
+   1035
+  ],
+  "dice": [
+   [
+    2,
+    2
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "burma",
+  "attacker_power": "japan",
+  "defender_powers": [
+   "united_states"
+  ],
+  "attackers": {
+   "inf": 5,
+   "art": 6
+  },
+  "defenders": {
+   "inf": 7
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "united_states",
+    "inf",
+    7
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "inf": 5,
+   "art": 6
+  },
+  "defenders": {
+   "inf": 7
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795443445444",
+  "target": "burma"
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "name": "0001_bb_vs_des_sz17",
+ "tag": "bb_vs_des_sz17",
+ "captured": "2026-11-23 02:16:58",
+ "crop_box_1440p": [
+  1233,
+  507,
+  1889,
+  925
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1560,
+  "bounds": [
+   1273,
+   617,
+   1849,
+   805
+  ],
+  "dice": [
+   [
+    null,
+    2
+   ],
+   [
+    4,
+    null
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "sea_zone_17",
+  "attacker_power": "germany",
+  "defender_powers": [
+   "united_kingdom"
+  ],
+  "attackers": {
+   "bb": 1
+  },
+  "defenders": {
+   "des": 1
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  }
+ },
+ "reader": {
+  "attackers": {},
+  "defenders": {},
+  "warnings": [
+   "defender: unrecognised icon at x=1636,y=617 (best score 0.18)",
+   "attacker: unrecognised icon at x=1347,y=745 (best score 0.07)",
+   "defender: skipped an unreadable entry in the die-2 row",
+   "attacker: skipped an unreadable entry in the die-4 row"
+  ],
+  "matches_truth": false
+ }
+}

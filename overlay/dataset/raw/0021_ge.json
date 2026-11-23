@@ -1,0 +1,106 @@
+{
+ "name": "0021_ge",
+ "tag": "ge",
+ "captured": "2026-11-23 03:57:08",
+ "crop_box_1440p": [
+  1124,
+  130,
+  1891,
+  805
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1451,
+  "bounds": [
+   1164,
+   369,
+   1851,
+   685
+  ],
+  "dice": [
+   [
+    2,
+    2
+   ],
+   [
+    null,
+    3
+   ],
+   [
+    null,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "russia",
+  "attacker_power": "germany",
+  "defender_powers": [
+   "soviet_union",
+   "united_states"
+  ],
+  "attackers": {
+   "art": 2
+  },
+  "defenders": {
+   "inf": 12,
+   "art": 81,
+   "tank": 85,
+   "ftr": 1
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {
+    "aa": 1
+   }
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "soviet_union",
+    "art",
+    81
+   ],
+   [
+    "soviet_union",
+    "ftr",
+    1
+   ],
+   [
+    "soviet_union",
+    "inf",
+    12
+   ],
+   [
+    "soviet_union",
+    "tank",
+    2
+   ],
+   [
+    "united_states",
+    "tank",
+    83
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "art": 2
+  },
+  "defenders": {
+   "inf": 12,
+   "art": 81,
+   "tank": 85,
+   "ftr": 1
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795422718888",
+  "target": "russia"
+ }
+}

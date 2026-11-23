@@ -1,0 +1,70 @@
+{
+ "name": "0053_uk2",
+ "tag": "uk2",
+ "captured": "2026-11-23 09:23:17",
+ "crop_box_1440p": [
+  918,
+  216,
+  1573,
+  506
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1245,
+  "bounds": [
+   958,
+   326,
+   1533,
+   386
+  ],
+  "dice": [
+   [
+    2,
+    2
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "baltic_states",
+  "attacker_power": "united_kingdom",
+  "defender_powers": [
+   "germany"
+  ],
+  "attackers": {
+   "art": 6
+  },
+  "defenders": {
+   "inf": 7
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "germany",
+    "inf",
+    7
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {},
+  "defenders": {
+   "inf": 7
+  },
+  "warnings": [
+   "attacker: unrecognised icon at x=1030,y=326 (best score 0.38)",
+   "attacker: skipped an unreadable entry in the die-2 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795443441156",
+  "target": "baltic_states"
+ }
+}

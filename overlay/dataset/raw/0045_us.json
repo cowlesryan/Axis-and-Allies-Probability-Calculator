@@ -1,0 +1,98 @@
+{
+ "name": "0045_us",
+ "tag": "us",
+ "captured": "2026-11-23 04:13:33",
+ "crop_box_1440p": [
+  558,
+  187,
+  1439,
+  733
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 998,
+  "bounds": [
+   598,
+   297,
+   1399,
+   613
+  ],
+  "dice": [
+   [
+    1,
+    null
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    4,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "sea_zone_7",
+  "attacker_power": "united_states",
+  "defender_powers": [
+   "germany",
+   "japan"
+  ],
+  "attackers": {
+   "des": 1,
+   "sub": 2,
+   "car": 3,
+   "bb": 4
+  },
+  "defenders": {
+   "car": 37,
+   "bb": 38,
+   "ftr": 40
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "germany",
+    "bb",
+    38
+   ],
+   [
+    "japan",
+    "car",
+    37
+   ],
+   [
+    "japan",
+    "ftr",
+    40
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "sub": 2,
+   "des": 1,
+   "car": 3,
+   "bb": 4
+  },
+  "defenders": {
+   "ftr": 40,
+   "car": 37,
+   "bb": 38
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795425133922",
+  "target": "sea_zone_7"
+ }
+}

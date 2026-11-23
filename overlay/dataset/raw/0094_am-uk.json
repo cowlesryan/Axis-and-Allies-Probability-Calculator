@@ -1,0 +1,91 @@
+{
+ "name": "0094_am-uk",
+ "tag": "am-uk",
+ "captured": "2026-11-23 10:09:19",
+ "crop_box_1440p": [
+  1535,
+  649,
+  2303,
+  1195
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1975,
+  "bounds": [
+   1575,
+   759,
+   2263,
+   1075
+  ],
+  "dice": [
+   [
+    1,
+    null
+   ],
+   [
+    2,
+    null
+   ],
+   [
+    3,
+    3
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "french_indochina_thailand",
+  "attacker_power": "united_kingdom",
+  "amphibious": {
+   "art": 1,
+   "inf": 2
+  },
+  "bombarders": {
+   "cru": 2
+  },
+  "bombard_slots": 3,
+  "defender_powers": [
+   "japan"
+  ],
+  "attackers": {
+   "art": 1,
+   "inf": 2,
+   "cru": 2
+  },
+  "defenders": {
+   "tank": 2
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "japan",
+    "tank",
+    2
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "inf": 2,
+   "cru": 2
+  },
+  "defenders": {
+   "tank": 2
+  },
+  "warnings": [
+   "attacker: unrecognised icon at x=1737,y=887 (best score 0.36)",
+   "attacker: skipped an unreadable entry in the die-2 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795446447997",
+  "target": "french_indochina_thailand"
+ }
+}

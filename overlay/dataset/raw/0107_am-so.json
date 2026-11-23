@@ -1,0 +1,84 @@
+{
+ "name": "0107_am-so",
+ "tag": "am-so",
+ "captured": "2026-11-23 10:48:43",
+ "crop_box_1440p": [
+  816,
+  390,
+  1584,
+  807
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1256,
+  "bounds": [
+   856,
+   500,
+   1544,
+   687
+  ],
+  "dice": [
+   [
+    3,
+    null
+   ],
+   [
+    null,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "japan",
+  "attacker_power": "soviet_union",
+  "amphibious": {
+   "tank": 1
+  },
+  "bombarders": {
+   "cru": 1
+  },
+  "bombard_slots": 1,
+  "defender_powers": [
+   "japan"
+  ],
+  "attackers": {
+   "tank": 1,
+   "cru": 1
+  },
+  "defenders": {
+   "ftr": 2
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "japan",
+    "ftr",
+    2
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "tank": 1
+  },
+  "defenders": {
+   "ftr": 2
+  },
+  "warnings": [
+   "attacker: unrecognised icon at x=1018,y=500 (best score 0.29)",
+   "attacker: skipped an unreadable entry in the die-3 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795446455410",
+  "target": "japan"
+ }
+}

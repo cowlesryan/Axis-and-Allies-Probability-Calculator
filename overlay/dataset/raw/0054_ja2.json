@@ -1,0 +1,75 @@
+{
+ "name": "0054_ja2",
+ "tag": "ja2",
+ "captured": "2026-11-23 09:25:32",
+ "crop_box_1440p": [
+  484,
+  621,
+  1252,
+  1039
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 924,
+  "bounds": [
+   524,
+   731,
+   1212,
+   919
+  ],
+  "dice": [
+   [
+    null,
+    1
+   ],
+   [
+    2,
+    null
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "sea_zone_13",
+  "attacker_power": "japan",
+  "defender_powers": [
+   "united_kingdom"
+  ],
+  "attackers": {
+   "sub": 3,
+   "des": 4
+  },
+  "defenders": {
+   "sub": 5
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "united_kingdom",
+    "sub",
+    5
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "sub": 3,
+   "des": 4
+  },
+  "defenders": {
+   "sub": 5
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795443445444",
+  "target": "sea_zone_13"
+ }
+}

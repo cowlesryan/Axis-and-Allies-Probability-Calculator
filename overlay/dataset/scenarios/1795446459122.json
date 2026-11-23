@@ -1,0 +1,115 @@
+{
+ "game_id": "1795446459122",
+ "name": "Overlay japan",
+ "power": "japan",
+ "battles": [
+  {
+   "type": "amphibious",
+   "target": "yunnan",
+   "origin": "formosa",
+   "sea": "sea_zone_61",
+   "attacker_power": "japan",
+   "attackers": {
+    "inf": 1
+   },
+   "defenders": [],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "inf": 1
+    },
+    "defenders": {
+     "inf": 3
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0,
+    "amphibious": {
+     "inf": 1
+    },
+    "bombarders": {},
+    "bombard_slots": 1
+   }
+  },
+  {
+   "type": "amphibious",
+   "target": "burma",
+   "origin": "french_indochina_thailand",
+   "sea": "sea_zone_36",
+   "attacker_power": "japan",
+   "attackers": {
+    "art": 1,
+    "bmb": 1,
+    "bb": 1
+   },
+   "defenders": [],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "art": 1,
+     "bmb": 1,
+     "bb": 1
+    },
+    "defenders": {
+     "tank": 2
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0,
+    "amphibious": {
+     "art": 1
+    },
+    "bombarders": {
+     "bb": 1
+    },
+    "bombard_slots": 1
+   }
+  },
+  {
+   "type": "amphibious",
+   "target": "buryatia_ssr",
+   "origin": "japan",
+   "sea": "sea_zone_62",
+   "attacker_power": "japan",
+   "attackers": {
+    "tank": 1,
+    "cru": 1
+   },
+   "defenders": [],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "tank": 1,
+     "cru": 1
+    },
+    "defenders": {
+     "ftr": 2
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0,
+    "amphibious": {
+     "tank": 1
+    },
+    "bombarders": {
+     "cru": 1
+    },
+    "bombard_slots": 1
+   }
+  }
+ ],
+ "planned_coverage": {
+  "attacker_kinds": {},
+  "defender_cells": {},
+  "layouts": {}
+ }
+}

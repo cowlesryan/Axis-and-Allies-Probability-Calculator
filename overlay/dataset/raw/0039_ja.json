@@ -1,0 +1,139 @@
+{
+ "name": "0039_ja",
+ "tag": "ja",
+ "captured": "2026-11-23 04:09:08",
+ "crop_box_1440p": [
+  1134,
+  359,
+  2178,
+  1162
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1574,
+  "bounds": [
+   1174,
+   598,
+   2138,
+   1042
+  ],
+  "dice": [
+   [
+    null,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    3,
+    3
+   ],
+   [
+    4,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "caucasus",
+  "attacker_power": "japan",
+  "defender_powers": [
+   "soviet_union",
+   "united_kingdom",
+   "united_states"
+  ],
+  "attackers": {
+   "inf": 4,
+   "bmb": 5,
+   "ftr": 6,
+   "art": 7
+  },
+  "defenders": {
+   "inf": 60,
+   "art": 49,
+   "tank": 1,
+   "ftr": 50,
+   "bmb": 60,
+   "aa": 3
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {
+    "aa": 3
+   }
+  },
+  "panel_aa": 3,
+  "defender_entries": [
+   [
+    "soviet_union",
+    "art",
+    1
+   ],
+   [
+    "soviet_union",
+    "ftr",
+    50
+   ],
+   [
+    "soviet_union",
+    "inf",
+    60
+   ],
+   [
+    "soviet_union",
+    "tank",
+    1
+   ],
+   [
+    "united_kingdom",
+    "bmb",
+    60
+   ],
+   [
+    "united_states",
+    "art",
+    48
+   ]
+  ],
+  "panel_aa_entries": [
+   [
+    "soviet_union",
+    1
+   ],
+   [
+    "united_states",
+    2
+   ]
+  ]
+ },
+ "reader": {
+  "attackers": {
+   "art": 7,
+   "ftr": 6,
+   "bmb": 5
+  },
+  "defenders": {
+   "inf": 60,
+   "art": 49,
+   "tank": 1,
+   "aa": 1,
+   "ftr": 50,
+   "bmb": 60
+  },
+  "warnings": [
+   "defender: unrecognised icon at x=1794,y=598 (best score 0.44)",
+   "attacker: unrecognised icon at x=1215,y=726 (best score 0.39)",
+   "defender: skipped an unreadable entry in the die-1 row",
+   "attacker: skipped an unreadable entry in the die-2 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795422744889",
+  "target": "caucasus"
+ }
+}

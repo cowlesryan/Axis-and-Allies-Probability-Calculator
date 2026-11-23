@@ -1,0 +1,79 @@
+{
+ "name": "0004_su",
+ "tag": "su",
+ "captured": "2026-11-23 02:44:25",
+ "crop_box_1440p": [
+  962,
+  452,
+  1618,
+  997
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1289,
+  "bounds": [
+   1002,
+   562,
+   1578,
+   877
+  ],
+  "dice": [
+   [
+    null,
+    1
+   ],
+   [
+    null,
+    2
+   ],
+   [
+    4,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "ukraine_ssr",
+  "attacker_power": "soviet_union",
+  "defender_powers": [
+   "germany"
+  ],
+  "attackers": {
+   "bmb": 4
+  },
+  "defenders": {
+   "inf": 57,
+   "ftr": 60,
+   "aa": 3
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {
+    "aa": 3
+   }
+  },
+  "panel_aa": 3
+ },
+ "reader": {
+  "attackers": {},
+  "defenders": {},
+  "warnings": [
+   "defender: unrecognised icon at x=1364,y=562 (best score 0.21)",
+   "defender: unreadable count '5?' at x=1470,y=690",
+   "attacker: unrecognised icon at x=1069,y=818 (best score 0.32)",
+   "attacker: unreadable count '?' at x=1187,y=818",
+   "defender: unreadable count '6?' at x=1469,y=818",
+   "defender: skipped an unreadable entry in the die-1 row",
+   "defender: skipped an unreadable entry in the die-2 row",
+   "attacker: skipped an unreadable entry in the die-4 row",
+   "defender: skipped an unreadable entry in the die-4 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795419615440",
+  "target": "ukraine_ssr"
+ }
+}

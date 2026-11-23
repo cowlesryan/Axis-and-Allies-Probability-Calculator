@@ -1,0 +1,147 @@
+{
+ "name": "0022_ge",
+ "tag": "ge",
+ "captured": "2026-11-23 03:57:12",
+ "crop_box_1440p": [
+  1134,
+  359,
+  2342,
+  1162
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1574,
+  "bounds": [
+   1174,
+   598,
+   2302,
+   1042
+  ],
+  "dice": [
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    3,
+    3
+   ],
+   [
+    4,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "caucasus",
+  "attacker_power": "germany",
+  "defender_powers": [
+   "soviet_union",
+   "united_kingdom",
+   "united_states"
+  ],
+  "attackers": {
+   "art": 5,
+   "inf": 6,
+   "tank": 7,
+   "bmb": 8
+  },
+  "defenders": {
+   "inf": 10,
+   "art": 7,
+   "tank": 1,
+   "bmb": 5,
+   "ftr": 8,
+   "aa": 3
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {
+    "aa": 3
+   }
+  },
+  "panel_aa": 3,
+  "defender_entries": [
+   [
+    "soviet_union",
+    "art",
+    1
+   ],
+   [
+    "soviet_union",
+    "inf",
+    3
+   ],
+   [
+    "soviet_union",
+    "tank",
+    1
+   ],
+   [
+    "united_kingdom",
+    "art",
+    6
+   ],
+   [
+    "united_kingdom",
+    "inf",
+    7
+   ],
+   [
+    "united_states",
+    "bmb",
+    5
+   ],
+   [
+    "united_states",
+    "ftr",
+    8
+   ]
+  ],
+  "panel_aa_entries": [
+   [
+    "soviet_union",
+    1
+   ],
+   [
+    "united_states",
+    2
+   ]
+  ]
+ },
+ "reader": {
+  "attackers": {
+   "inf": 6,
+   "art": 5,
+   "tank": 7,
+   "bmb": 8
+  },
+  "defenders": {
+   "inf": 3,
+   "art": 6,
+   "tank": 1,
+   "aa": 1,
+   "ftr": 8,
+   "bmb": 5
+  },
+  "warnings": [
+   "defender: unrecognised icon at x=1812,y=598 (best score 0.30)",
+   "defender: unrecognised icon at x=1794,y=726 (best score 0.34)",
+   "defender: unrecognised icon at x=1997,y=726 (best score 0.52)",
+   "defender: skipped an unreadable entry in the die-1 row",
+   "defender: skipped an unreadable entry in the die-2 row",
+   "defender: skipped an unreadable entry in the die-2 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795422718888",
+  "target": "caucasus"
+ }
+}

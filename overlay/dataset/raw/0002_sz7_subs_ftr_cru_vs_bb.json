@@ -1,0 +1,70 @@
+{
+ "name": "0002_sz7_subs_ftr_cru_vs_bb",
+ "tag": "sz7_subs_ftr_cru_vs_bb",
+ "captured": "2026-11-23 02:18:16",
+ "crop_box_1440p": [
+  853,
+  442,
+  1620,
+  988
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1292,
+  "bounds": [
+   893,
+   552,
+   1580,
+   868
+  ],
+  "dice": [
+   [
+    2,
+    null
+   ],
+   [
+    3,
+    null
+   ],
+   [
+    null,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "sea_zone_7",
+  "attacker_power": "germany",
+  "defender_powers": [
+   "united_kingdom"
+  ],
+  "attackers": {
+   "ftr": 1,
+   "cru": 1,
+   "sub": 4
+  },
+  "defenders": {
+   "bb": 1
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {
+    "trn": 1
+   }
+  }
+ },
+ "reader": {
+  "attackers": {
+   "ftr": 1,
+   "sub": 4,
+   "cru": 1
+  },
+  "defenders": {
+   "bb": 1
+  },
+  "warnings": [],
+  "matches_truth": true
+ }
+}

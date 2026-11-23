@@ -1,0 +1,127 @@
+{
+ "name": "0047_us",
+ "tag": "us",
+ "captured": "2026-11-23 04:13:46",
+ "crop_box_1440p": [
+  968,
+  114,
+  2012,
+  917
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1408,
+  "bounds": [
+   1008,
+   353,
+   1972,
+   797
+  ],
+  "dice": [
+   [
+    1,
+    1
+   ],
+   [
+    null,
+    2
+   ],
+   [
+    3,
+    3
+   ],
+   [
+    4,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "belorussia",
+  "attacker_power": "united_states",
+  "defender_powers": [
+   "germany",
+   "japan"
+  ],
+  "attackers": {
+   "bmb": 9,
+   "ftr": 10,
+   "inf": 11,
+   "tank": 12
+  },
+  "defenders": {
+   "inf": 13,
+   "ftr": 9,
+   "art": 12,
+   "tank": 14,
+   "aa": 3
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {
+    "aa": 3
+   }
+  },
+  "panel_aa": 3,
+  "defender_entries": [
+   [
+    "germany",
+    "ftr",
+    9
+   ],
+   [
+    "germany",
+    "inf",
+    3
+   ],
+   [
+    "japan",
+    "art",
+    12
+   ],
+   [
+    "japan",
+    "inf",
+    10
+   ],
+   [
+    "japan",
+    "tank",
+    14
+   ]
+  ],
+  "panel_aa_entries": [
+   [
+    "germany",
+    3
+   ]
+  ]
+ },
+ "reader": {
+  "attackers": {
+   "bmb": 9
+  },
+  "defenders": {
+   "inf": 13,
+   "art": 12,
+   "tank": 14,
+   "aa": 3,
+   "ftr": 9
+  },
+  "warnings": [
+   "attacker: unrecognised icon at x=1213,y=353 (best score 0.53)",
+   "attacker: unrecognised icon at x=1031,y=609 (best score 0.52)",
+   "attacker: unrecognised icon at x=1189,y=609 (best score 0.53)",
+   "attacker: skipped an unreadable entry in the die-1 row",
+   "attacker: skipped an unreadable entry in the die-3 row",
+   "attacker: skipped an unreadable entry in the die-3 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795425133922",
+  "target": "belorussia"
+ }
+}

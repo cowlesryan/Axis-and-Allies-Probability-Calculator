@@ -1,0 +1,86 @@
+{
+ "name": "0015_ge",
+ "tag": "ge",
+ "captured": "2026-11-23 03:38:46",
+ "crop_box_1440p": [
+  1736,
+  206,
+  2392,
+  880
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 2063,
+  "bounds": [
+   1776,
+   316,
+   2352,
+   760
+  ],
+  "dice": [
+   [
+    null,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    3,
+    3
+   ],
+   [
+    null,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "buryatia_ssr",
+  "attacker_power": "germany",
+  "defender_powers": [
+   "soviet_union",
+   "united_kingdom"
+  ],
+  "attackers": {
+   "art": 24,
+   "tank": 1
+  },
+  "defenders": {
+   "inf": 72,
+   "ftr": 73,
+   "bmb": 77,
+   "tank": 78
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {
+    "aa": 2
+   }
+  },
+  "panel_aa": 0
+ },
+ "reader": {
+  "attackers": {
+   "art": 24,
+   "tank": 1
+  },
+  "defenders": {
+   "inf": 72,
+   "ftr": 73,
+   "bmb": 77
+  },
+  "warnings": [
+   "defender: unreadable count '7?' at x=2244,y=572",
+   "defender: skipped an unreadable entry in the die-3 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795422718888",
+  "target": "buryatia_ssr"
+ }
+}

@@ -1,0 +1,80 @@
+{
+ "name": "0003_ge_land_vs_karelia",
+ "tag": "ge_land_vs_karelia",
+ "captured": "2026-11-23 02:33:32",
+ "crop_box_1440p": [
+  965,
+  343,
+  1845,
+  1017
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1405,
+  "bounds": [
+   1005,
+   453,
+   1805,
+   897
+  ],
+  "dice": [
+   [
+    1,
+    null
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    3,
+    null
+   ],
+   [
+    null,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "karelia_ssr",
+  "attacker_power": "germany",
+  "defender_powers": [
+   "soviet_union"
+  ],
+  "attackers": {
+   "inf": 3,
+   "art": 1,
+   "tank": 1
+  },
+  "defenders": {
+   "inf": 4,
+   "art": 1,
+   "ftr": 1
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  }
+ },
+ "reader": {
+  "attackers": {
+   "inf": 3,
+   "tank": 1
+  },
+  "defenders": {
+   "ftr": 1
+  },
+  "warnings": [
+   "attacker: unrecognised icon at x=1191,y=581 (best score 0.40)",
+   "defender: unrecognised icon at x=1480,y=581 (best score 0.37)",
+   "defender: unrecognised icon at x=1667,y=581 (best score 0.51)",
+   "attacker: skipped an unreadable entry in the die-2 row",
+   "defender: skipped an unreadable entry in the die-2 row",
+   "defender: skipped an unreadable entry in the die-2 row"
+  ],
+  "matches_truth": false
+ }
+}

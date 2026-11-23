@@ -1,0 +1,100 @@
+{
+ "name": "0103_am-ge",
+ "tag": "am-ge",
+ "captured": "2026-11-23 10:39:37",
+ "crop_box_1440p": [
+  613,
+  158,
+  1269,
+  961
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 940,
+  "bounds": [
+   653,
+   397,
+   1229,
+   841
+  ],
+  "dice": [
+   [
+    1,
+    1
+   ],
+   [
+    null,
+    2
+   ],
+   [
+    3,
+    null
+   ],
+   [
+    4,
+    null
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "iceland",
+  "attacker_power": "germany",
+  "amphibious": {
+   "inf": 2
+  },
+  "bombarders": {
+   "bb": 1,
+   "cru": 1
+  },
+  "bombard_slots": 2,
+  "defender_powers": [
+   "united_kingdom"
+  ],
+  "attackers": {
+   "inf": 2,
+   "bb": 1,
+   "cru": 1
+  },
+  "defenders": {
+   "bmb": 1,
+   "inf": 2
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "united_kingdom",
+    "bmb",
+    1
+   ],
+   [
+    "united_kingdom",
+    "inf",
+    2
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "inf": 2,
+   "cru": 1,
+   "bb": 1
+  },
+  "defenders": {
+   "inf": 2,
+   "bmb": 1
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795446451632",
+  "target": "iceland"
+ }
+}

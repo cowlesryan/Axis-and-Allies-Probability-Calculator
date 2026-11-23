@@ -1,0 +1,69 @@
+{
+ "name": "0081_ja2",
+ "tag": "ja2",
+ "captured": "2026-11-23 09:37:34",
+ "crop_box_1440p": [
+  939,
+  664,
+  1595,
+  1083
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1265,
+  "bounds": [
+   979,
+   903,
+   1555,
+   963
+  ],
+  "dice": [
+   [
+    3,
+    3
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "egypt",
+  "attacker_power": "japan",
+  "defender_powers": [
+   "united_states"
+  ],
+  "attackers": {
+   "tank": 8
+  },
+  "defenders": {
+   "tank": 9
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "united_states",
+    "tank",
+    9
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "tank": 8
+  },
+  "defenders": {
+   "tank": 9
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795443445444",
+  "target": "egypt"
+ }
+}

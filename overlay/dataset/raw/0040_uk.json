@@ -1,0 +1,105 @@
+{
+ "name": "0040_uk",
+ "tag": "uk",
+ "captured": "2026-11-23 04:09:49",
+ "crop_box_1440p": [
+  484,
+  477,
+  1252,
+  1152
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 811,
+  "bounds": [
+   524,
+   716,
+   1212,
+   1032
+  ],
+  "dice": [
+   [
+    2,
+    2
+   ],
+   [
+    null,
+    3
+   ],
+   [
+    4,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "sea_zone_13",
+  "attacker_power": "united_kingdom",
+  "defender_powers": [
+   "germany",
+   "japan"
+  ],
+  "attackers": {
+   "des": 12,
+   "bb": 13
+  },
+  "defenders": {
+   "des": 83,
+   "bb": 88,
+   "cru": 89,
+   "car": 90
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {
+    "trn": 3
+   }
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "germany",
+    "des",
+    83
+   ],
+   [
+    "japan",
+    "bb",
+    88
+   ],
+   [
+    "japan",
+    "car",
+    90
+   ],
+   [
+    "japan",
+    "cru",
+    89
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "bb": 13
+  },
+  "defenders": {
+   "des": 83,
+   "cru": 89,
+   "car": 90,
+   "bb": 88
+  },
+  "warnings": [
+   "attacker: unrecognised icon at x=597,y=716 (best score 0.52)",
+   "attacker: skipped an unreadable entry in the die-2 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795422738787",
+  "target": "sea_zone_13"
+ }
+}

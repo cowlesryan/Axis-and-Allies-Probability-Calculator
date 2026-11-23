@@ -1,0 +1,87 @@
+{
+ "name": "0089_am-uk",
+ "tag": "am-uk",
+ "captured": "2026-11-23 10:08:50",
+ "crop_box_1440p": [
+  570,
+  649,
+  1338,
+  1195
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1010,
+  "bounds": [
+   610,
+   759,
+   1298,
+   1075
+  ],
+  "dice": [
+   [
+    1,
+    null
+   ],
+   [
+    null,
+    2
+   ],
+   [
+    3,
+    null
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "morocco",
+  "attacker_power": "united_kingdom",
+  "amphibious": {
+   "tank": 1,
+   "inf": 1
+  },
+  "bombarders": {},
+  "bombard_slots": 2,
+  "defender_powers": [
+   "germany"
+  ],
+  "attackers": {
+   "tank": 1,
+   "inf": 1,
+   "ftr": 1
+  },
+  "defenders": {
+   "inf": 3
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "germany",
+    "inf",
+    3
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "inf": 1,
+   "tank": 1,
+   "ftr": 1
+  },
+  "defenders": {
+   "inf": 3
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795446447997",
+  "target": "morocco"
+ }
+}

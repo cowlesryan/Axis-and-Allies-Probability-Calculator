@@ -1,0 +1,396 @@
+{
+ "game_id": "1795422744889",
+ "name": "Overlay japan",
+ "power": "japan",
+ "battles": [
+  {
+   "type": "land",
+   "target": "karelia_ssr",
+   "origin": "baltic_states",
+   "attacker_power": "japan",
+   "attackers": {
+    "bmb": 24,
+    "tank": 1,
+    "art": 2,
+    "ftr": 3
+   },
+   "defenders": [
+    [
+     "united_kingdom",
+     "art",
+     31
+    ],
+    [
+     "united_kingdom",
+     "inf",
+     37
+    ],
+    [
+     "united_states",
+     "bmb",
+     38
+    ],
+    [
+     "united_kingdom",
+     "ftr",
+     40
+    ]
+   ],
+   "hidden_defenders": {
+    "aa": 1
+   },
+   "prediction": 52,
+   "truth": {
+    "attackers": {
+     "bmb": 24,
+     "tank": 1,
+     "art": 2,
+     "ftr": 3
+    },
+    "defenders": {
+     "inf": 41,
+     "art": 32,
+     "ftr": 41,
+     "bmb": 38
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {
+      "aa": 1
+     }
+    },
+    "panel_aa": 1
+   }
+  },
+  {
+   "type": "land",
+   "target": "caucasus",
+   "origin": "ukraine_ssr",
+   "attacker_power": "japan",
+   "attackers": {
+    "inf": 4,
+    "bmb": 5,
+    "ftr": 6,
+    "art": 7
+   },
+   "defenders": [
+    [
+     "united_states",
+     "art",
+     48
+    ],
+    [
+     "soviet_union",
+     "ftr",
+     50
+    ],
+    [
+     "soviet_union",
+     "inf",
+     57
+    ],
+    [
+     "united_kingdom",
+     "bmb",
+     60
+    ]
+   ],
+   "hidden_defenders": {
+    "aa": 2
+   },
+   "prediction": 63,
+   "truth": {
+    "attackers": {
+     "inf": 4,
+     "bmb": 5,
+     "ftr": 6,
+     "art": 7
+    },
+    "defenders": {
+     "inf": 60,
+     "art": 49,
+     "tank": 1,
+     "ftr": 50,
+     "bmb": 60
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {
+      "aa": 3
+     }
+    },
+    "panel_aa": 3
+   }
+  },
+  {
+   "type": "land",
+   "target": "egypt",
+   "origin": "libya",
+   "attacker_power": "japan",
+   "attackers": {
+    "ftr": 8,
+    "tank": 9,
+    "bmb": 10,
+    "inf": 11
+   },
+   "defenders": [
+    [
+     "united_states",
+     "inf",
+     67
+    ],
+    [
+     "soviet_union",
+     "art",
+     70
+    ],
+    [
+     "soviet_union",
+     "bmb",
+     73
+    ],
+    [
+     "united_states",
+     "tank",
+     77
+    ]
+   ],
+   "hidden_defenders": {
+    "aa": 3
+   },
+   "prediction": 75,
+   "truth": {
+    "attackers": {
+     "ftr": 8,
+     "tank": 9,
+     "bmb": 10,
+     "inf": 11
+    },
+    "defenders": {
+     "inf": 68,
+     "tank": 78,
+     "art": 71,
+     "ftr": 1,
+     "bmb": 73
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {
+      "aa": 3
+     }
+    },
+    "panel_aa": 3
+   }
+  },
+  {
+   "type": "sea",
+   "target": "sea_zone_3",
+   "origin": "sea_zone_2",
+   "attacker_power": "japan",
+   "attackers": {
+    "bb": 12,
+    "bmb": 13,
+    "car": 17,
+    "des": 20
+   },
+   "defenders": [
+    [
+     "united_kingdom",
+     "sub",
+     78
+    ],
+    [
+     "united_states",
+     "bmb",
+     80
+    ],
+    [
+     "soviet_union",
+     "bb",
+     83
+    ],
+    [
+     "united_kingdom",
+     "car",
+     88
+    ]
+   ],
+   "hidden_defenders": {
+    "trn": 1
+   },
+   "prediction": 88,
+   "truth": {
+    "attackers": {
+     "bb": 12,
+     "bmb": 13,
+     "car": 17,
+     "des": 20
+    },
+    "defenders": {
+     "sub": 78,
+     "bmb": 80,
+     "bb": 83,
+     "car": 88
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {
+      "trn": 1
+     }
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "sea",
+   "target": "sea_zone_7",
+   "origin": "sea_zone_2",
+   "attacker_power": "japan",
+   "attackers": {
+    "bb": 24,
+    "des": 1,
+    "cru": 2,
+    "sub": 3
+   },
+   "defenders": [
+    [
+     "united_kingdom",
+     "des",
+     89
+    ],
+    [
+     "united_states",
+     "car",
+     90
+    ],
+    [
+     "united_states",
+     "cru",
+     99
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 100,
+   "truth": {
+    "attackers": {
+     "bb": 24,
+     "des": 1,
+     "cru": 2,
+     "sub": 3
+    },
+    "defenders": {
+     "bb": 1,
+     "des": 89,
+     "car": 90,
+     "cru": 99
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {
+      "trn": 1
+     }
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "sea",
+   "target": "sea_zone_13",
+   "origin": "sea_zone_12",
+   "attacker_power": "japan",
+   "attackers": {
+    "bmb": 4,
+    "car": 5,
+    "bb": 6
+   },
+   "defenders": [
+    [
+     "united_states",
+     "ftr",
+     1
+    ],
+    [
+     "united_kingdom",
+     "bmb",
+     2
+    ],
+    [
+     "soviet_union",
+     "sub",
+     3
+    ],
+    [
+     "united_kingdom",
+     "bb",
+     4
+    ]
+   ],
+   "hidden_defenders": {
+    "trn": 3
+   },
+   "prediction": 0,
+   "truth": {
+    "attackers": {
+     "bmb": 4,
+     "car": 5,
+     "bb": 6
+    },
+    "defenders": {
+     "ftr": 1,
+     "bmb": 2,
+     "sub": 3,
+     "bb": 4
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {
+      "trn": 3
+     }
+    },
+    "panel_aa": 0
+   }
+  }
+ ],
+ "planned_coverage": {
+  "attacker_kinds": {
+   "art": 2,
+   "bb": 3,
+   "bmb": 5,
+   "car": 2,
+   "cru": 1,
+   "des": 2,
+   "ftr": 3,
+   "inf": 2,
+   "sub": 1,
+   "tank": 2
+  },
+  "defender_cells": {
+   "soviet_union:art": 1,
+   "soviet_union:bb": 1,
+   "soviet_union:bmb": 1,
+   "soviet_union:ftr": 1,
+   "soviet_union:inf": 1,
+   "soviet_union:sub": 1,
+   "united_kingdom:art": 1,
+   "united_kingdom:bb": 1,
+   "united_kingdom:bmb": 2,
+   "united_kingdom:car": 1,
+   "united_kingdom:des": 1,
+   "united_kingdom:ftr": 1,
+   "united_kingdom:inf": 1,
+   "united_kingdom:sub": 1,
+   "united_states:art": 1,
+   "united_states:bmb": 2,
+   "united_states:car": 1,
+   "united_states:cru": 1,
+   "united_states:ftr": 1,
+   "united_states:inf": 1,
+   "united_states:tank": 1
+  },
+  "layouts": {
+   "2": 1,
+   "3": 2,
+   "4": 3
+  }
+ }
+}

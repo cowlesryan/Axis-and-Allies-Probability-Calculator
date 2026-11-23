@@ -1,0 +1,65 @@
+{
+ "name": "0006_su",
+ "tag": "su",
+ "captured": "2026-11-23 02:48:46",
+ "crop_box_1440p": [
+  918,
+  216,
+  1573,
+  633
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1245,
+  "bounds": [
+   958,
+   326,
+   1533,
+   513
+  ],
+  "dice": [
+   [
+    1,
+    null
+   ],
+   [
+    null,
+    2
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "baltic_states",
+  "attacker_power": "soviet_union",
+  "defender_powers": [
+   "germany"
+  ],
+  "attackers": {
+   "inf": 1
+  },
+  "defenders": {
+   "inf": 1
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0
+ },
+ "reader": {
+  "attackers": {
+   "inf": 1
+  },
+  "defenders": {
+   "inf": 1
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795419615440",
+  "target": "baltic_states"
+ }
+}

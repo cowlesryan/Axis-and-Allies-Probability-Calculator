@@ -1,0 +1,78 @@
+{
+ "name": "0104_am-ge",
+ "tag": "am-ge",
+ "captured": "2026-11-23 10:39:52",
+ "crop_box_1440p": [
+  965,
+  343,
+  1620,
+  761
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1292,
+  "bounds": [
+   1005,
+   453,
+   1580,
+   641
+  ],
+  "dice": [
+   [
+    1,
+    null
+   ],
+   [
+    null,
+    2
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "karelia_ssr",
+  "attacker_power": "germany",
+  "amphibious": {
+   "inf": 1
+  },
+  "bombarders": {},
+  "bombard_slots": 1,
+  "defender_powers": [
+   "soviet_union"
+  ],
+  "attackers": {
+   "inf": 1
+  },
+  "defenders": {
+   "inf": 3
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "soviet_union",
+    "inf",
+    3
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "inf": 1
+  },
+  "defenders": {
+   "inf": 3
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795446451632",
+  "target": "karelia_ssr"
+ }
+}

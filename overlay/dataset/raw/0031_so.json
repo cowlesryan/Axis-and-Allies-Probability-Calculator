@@ -1,0 +1,99 @@
+{
+ "name": "0031_so",
+ "tag": "so",
+ "captured": "2026-11-23 04:05:05",
+ "crop_box_1440p": [
+  796,
+  520,
+  1564,
+  1195
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1123,
+  "bounds": [
+   836,
+   759,
+   1524,
+   1075
+  ],
+  "dice": [
+   [
+    2,
+    2
+   ],
+   [
+    null,
+    3
+   ],
+   [
+    null,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "libya",
+  "attacker_power": "soviet_union",
+  "defender_powers": [
+   "germany",
+   "japan"
+  ],
+  "attackers": {
+   "art": 6
+  },
+  "defenders": {
+   "inf": 74,
+   "tank": 1,
+   "ftr": 70,
+   "art": 77
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "germany",
+    "art",
+    77
+   ],
+   [
+    "germany",
+    "inf",
+    74
+   ],
+   [
+    "germany",
+    "tank",
+    1
+   ],
+   [
+    "japan",
+    "ftr",
+    70
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "art": 6
+  },
+  "defenders": {
+   "inf": 74,
+   "art": 77,
+   "tank": 1,
+   "ftr": 70
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795422730785",
+  "target": "libya"
+ }
+}

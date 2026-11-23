@@ -1,0 +1,154 @@
+{
+ "game_id": "1795446455410",
+ "name": "Overlay soviet_union",
+ "power": "soviet_union",
+ "battles": [
+  {
+   "type": "amphibious",
+   "target": "ukraine_ssr",
+   "origin": "caucasus",
+   "sea": "sea_zone_16",
+   "attacker_power": "soviet_union",
+   "attackers": {
+    "inf": 1
+   },
+   "defenders": [],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "inf": 1
+    },
+    "defenders": {
+     "inf": 3
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0,
+    "amphibious": {
+     "inf": 1
+    },
+    "bombarders": {},
+    "bombard_slots": 1
+   }
+  },
+  {
+   "type": "amphibious",
+   "target": "bulgaria_romania",
+   "origin": "caucasus",
+   "sea": "sea_zone_16",
+   "attacker_power": "soviet_union",
+   "attackers": {
+    "art": 1,
+    "bmb": 1,
+    "bb": 1
+   },
+   "defenders": [],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "art": 1,
+     "bmb": 1,
+     "bb": 1
+    },
+    "defenders": {
+     "tank": 2
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0,
+    "amphibious": {
+     "art": 1
+    },
+    "bombarders": {
+     "bb": 1
+    },
+    "bombard_slots": 1
+   }
+  },
+  {
+   "type": "amphibious",
+   "target": "japan",
+   "origin": "buryatia_ssr",
+   "sea": "sea_zone_62",
+   "attacker_power": "soviet_union",
+   "attackers": {
+    "tank": 1,
+    "cru": 1
+   },
+   "defenders": [],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "tank": 1,
+     "cru": 1
+    },
+    "defenders": {
+     "ftr": 2
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0,
+    "amphibious": {
+     "tank": 1
+    },
+    "bombarders": {
+     "cru": 1
+    },
+    "bombard_slots": 1
+   }
+  },
+  {
+   "type": "amphibious",
+   "target": "manchuria",
+   "origin": "buryatia_ssr",
+   "sea": "sea_zone_62",
+   "attacker_power": "soviet_union",
+   "attackers": {
+    "inf": 2,
+    "bb": 1,
+    "cru": 1
+   },
+   "defenders": [],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "inf": 2,
+     "bb": 1,
+     "cru": 1
+    },
+    "defenders": {
+     "bmb": 1,
+     "inf": 2
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0,
+    "amphibious": {
+     "inf": 2
+    },
+    "bombarders": {
+     "bb": 1,
+     "cru": 1
+    },
+    "bombard_slots": 2
+   }
+  }
+ ],
+ "planned_coverage": {
+  "attacker_kinds": {},
+  "defender_cells": {},
+  "layouts": {}
+ }
+}

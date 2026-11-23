@@ -1,0 +1,88 @@
+{
+ "name": "0099_am-ja",
+ "tag": "am-ja",
+ "captured": "2026-11-23 10:11:53",
+ "crop_box_1440p": [
+  1456,
+  649,
+  2223,
+  1195
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1896,
+  "bounds": [
+   1496,
+   759,
+   2183,
+   1075
+  ],
+  "dice": [
+   [
+    2,
+    null
+   ],
+   [
+    null,
+    3
+   ],
+   [
+    4,
+    null
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "burma",
+  "attacker_power": "japan",
+  "amphibious": {
+   "art": 1
+  },
+  "bombarders": {
+   "bb": 1
+  },
+  "bombard_slots": 1,
+  "defender_powers": [
+   "united_kingdom"
+  ],
+  "attackers": {
+   "art": 1,
+   "bmb": 1,
+   "bb": 1
+  },
+  "defenders": {
+   "tank": 2
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "united_kingdom",
+    "tank",
+    2
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "art": 1,
+   "bmb": 1,
+   "bb": 1
+  },
+  "defenders": {
+   "tank": 2
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795446459122",
+  "target": "burma"
+ }
+}

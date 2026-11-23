@@ -1,0 +1,107 @@
+{
+ "name": "0027_so",
+ "tag": "so",
+ "captured": "2026-11-23 04:04:45",
+ "crop_box_1440p": [
+  374,
+  477,
+  1142,
+  1152
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 701,
+  "bounds": [
+   414,
+   716,
+   1102,
+   1032
+  ],
+  "dice": [
+   [
+    2,
+    2
+   ],
+   [
+    3,
+    null
+   ],
+   [
+    null,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "sea_zone_12",
+  "attacker_power": "soviet_union",
+  "defender_powers": [
+   "germany",
+   "japan"
+  ],
+  "attackers": {
+   "des": 6,
+   "ftr": 7
+  },
+  "defenders": {
+   "des": 20,
+   "car": 23,
+   "ftr": 30,
+   "bb": 31
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {
+    "trn": 2
+   }
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "germany",
+    "bb",
+    31
+   ],
+   [
+    "germany",
+    "des",
+    20
+   ],
+   [
+    "germany",
+    "ftr",
+    30
+   ],
+   [
+    "japan",
+    "car",
+    23
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "ftr": 7
+  },
+  "defenders": {
+   "des": 20,
+   "car": 23
+  },
+  "warnings": [
+   "attacker: unrecognised icon at x=486,y=716 (best score 0.45)",
+   "defender: unrecognised icon at x=777,y=972 (best score 0.55)",
+   "defender: unrecognised icon at x=921,y=972 (best score 0.39)",
+   "attacker: skipped an unreadable entry in the die-2 row",
+   "defender: skipped an unreadable entry in the die-4 row",
+   "defender: skipped an unreadable entry in the die-4 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795422730785",
+  "target": "sea_zone_12"
+ }
+}

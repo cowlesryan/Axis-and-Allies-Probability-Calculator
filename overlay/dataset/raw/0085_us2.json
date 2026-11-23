@@ -1,0 +1,69 @@
+{
+ "name": "0085_us2",
+ "tag": "us2",
+ "captured": "2026-11-23 09:39:42",
+ "crop_box_1440p": [
+  962,
+  452,
+  1618,
+  742
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1288,
+  "bounds": [
+   1002,
+   562,
+   1578,
+   622
+  ],
+  "dice": [
+   [
+    3,
+    3
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "ukraine_ssr",
+  "attacker_power": "united_states",
+  "defender_powers": [
+   "germany"
+  ],
+  "attackers": {
+   "ftr": 1
+  },
+  "defenders": {
+   "tank": 2
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "germany",
+    "tank",
+    2
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "ftr": 1
+  },
+  "defenders": {
+   "tank": 2
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795443453311",
+  "target": "ukraine_ssr"
+ }
+}

@@ -1,0 +1,134 @@
+{
+ "name": "0024_ge",
+ "tag": "ge",
+ "captured": "2026-11-23 03:59:29",
+ "crop_box_1440p": [
+  965,
+  343,
+  1845,
+  1017
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1405,
+  "bounds": [
+   1005,
+   453,
+   1805,
+   897
+  ],
+  "dice": [
+   [
+    null,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    3,
+    3
+   ],
+   [
+    4,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "karelia_ssr",
+  "attacker_power": "germany",
+  "defender_powers": [
+   "soviet_union",
+   "united_kingdom"
+  ],
+  "attackers": {
+   "art": 1,
+   "bmb": 2,
+   "ftr": 3,
+   "tank": 4
+  },
+  "defenders": {
+   "inf": 4,
+   "art": 4,
+   "ftr": 2,
+   "tank": 2,
+   "bmb": 4,
+   "aa": 1
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {
+    "aa": 1
+   }
+  },
+  "panel_aa": 1,
+  "defender_entries": [
+   [
+    "soviet_union",
+    "art",
+    4
+   ],
+   [
+    "soviet_union",
+    "ftr",
+    1
+   ],
+   [
+    "soviet_union",
+    "inf",
+    4
+   ],
+   [
+    "united_kingdom",
+    "bmb",
+    4
+   ],
+   [
+    "united_kingdom",
+    "ftr",
+    1
+   ],
+   [
+    "united_kingdom",
+    "tank",
+    2
+   ]
+  ],
+  "panel_aa_entries": [
+   [
+    "united_kingdom",
+    1
+   ]
+  ]
+ },
+ "reader": {
+  "attackers": {
+   "art": 1,
+   "tank": 4,
+   "bmb": 2
+  },
+  "defenders": {
+   "art": 4,
+   "tank": 2,
+   "ftr": 2,
+   "bmb": 4
+  },
+  "warnings": [
+   "defender: unrecognised icon at x=1625,y=453 (best score 0.17)",
+   "defender: unrecognised icon at x=1625,y=581 (best score 0.45)",
+   "attacker: unrecognised icon at x=1167,y=709 (best score 0.43)",
+   "defender: skipped an unreadable entry in the die-1 row",
+   "defender: skipped an unreadable entry in the die-2 row",
+   "attacker: skipped an unreadable entry in the die-3 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795422718888",
+  "target": "karelia_ssr"
+ }
+}

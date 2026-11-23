@@ -1,0 +1,109 @@
+{
+ "name": "0037_ja",
+ "tag": "ja",
+ "captured": "2026-11-23 04:08:58",
+ "crop_box_1440p": [
+  558,
+  187,
+  1439,
+  733
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 998,
+  "bounds": [
+   598,
+   297,
+   1399,
+   613
+  ],
+  "dice": [
+   [
+    2,
+    2
+   ],
+   [
+    3,
+    3
+   ],
+   [
+    4,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "sea_zone_7",
+  "attacker_power": "japan",
+  "defender_powers": [
+   "united_kingdom",
+   "united_states"
+  ],
+  "attackers": {
+   "bb": 24,
+   "des": 1,
+   "cru": 2,
+   "sub": 3
+  },
+  "defenders": {
+   "bb": 1,
+   "des": 89,
+   "car": 90,
+   "cru": 99
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {
+    "trn": 1
+   }
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "united_kingdom",
+    "bb",
+    1
+   ],
+   [
+    "united_kingdom",
+    "des",
+    89
+   ],
+   [
+    "united_states",
+    "car",
+    90
+   ],
+   [
+    "united_states",
+    "cru",
+    99
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "sub": 3,
+   "des": 1,
+   "bb": 24
+  },
+  "defenders": {
+   "des": 89,
+   "cru": 99,
+   "car": 90,
+   "bb": 1
+  },
+  "warnings": [
+   "attacker: unrecognised icon at x=787,y=425 (best score 0.50)",
+   "attacker: skipped an unreadable entry in the die-3 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795422744889",
+  "target": "sea_zone_7"
+ }
+}

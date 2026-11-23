@@ -1,0 +1,71 @@
+{
+ "name": "0066_so2",
+ "tag": "so2",
+ "captured": "2026-11-23 09:29:36",
+ "crop_box_1440p": [
+  796,
+  775,
+  1564,
+  1065
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1236,
+  "bounds": [
+   836,
+   885,
+   1524,
+   945
+  ],
+  "dice": [
+   [
+    2,
+    2
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "libya",
+  "attacker_power": "soviet_union",
+  "defender_powers": [
+   "germany"
+  ],
+  "attackers": {
+   "inf": 5,
+   "art": 6
+  },
+  "defenders": {
+   "inf": 7
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "germany",
+    "inf",
+    7
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "inf": 5,
+   "art": 6
+  },
+  "defenders": {
+   "inf": 7
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795443461603",
+  "target": "libya"
+ }
+}

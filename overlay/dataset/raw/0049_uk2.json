@@ -1,0 +1,81 @@
+{
+ "name": "0049_uk2",
+ "tag": "uk2",
+ "captured": "2026-11-23 09:20:03",
+ "crop_box_1440p": [
+  1583,
+  649,
+  2239,
+  1195
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1910,
+  "bounds": [
+   1623,
+   759,
+   2199,
+   1075
+  ],
+  "dice": [
+   [
+    1,
+    null
+   ],
+   [
+    null,
+    2
+   ],
+   [
+    3,
+    null
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "french_indochina_thailand",
+  "attacker_power": "united_kingdom",
+  "defender_powers": [
+   "japan"
+  ],
+  "attackers": {
+   "tank": 8,
+   "inf": 9
+  },
+  "defenders": {
+   "inf": 11
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "japan",
+    "inf",
+    11
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {},
+  "defenders": {
+   "inf": 11
+  },
+  "warnings": [
+   "attacker: unrecognised icon at x=1716,y=759 (best score 0.50)",
+   "attacker: unrecognised icon at x=1697,y=1015 (best score 0.55)",
+   "attacker: skipped an unreadable entry in the die-1 row",
+   "attacker: skipped an unreadable entry in the die-3 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795443441156",
+  "target": "french_indochina_thailand"
+ }
+}

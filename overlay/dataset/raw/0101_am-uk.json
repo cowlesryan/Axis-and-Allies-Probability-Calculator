@@ -1,0 +1,78 @@
+{
+ "name": "0101_am-uk",
+ "tag": "am-uk",
+ "captured": "2026-11-23 10:36:44",
+ "crop_box_1440p": [
+  843,
+  145,
+  1499,
+  692
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1170,
+  "bounds": [
+   883,
+   384,
+   1459,
+   572
+  ],
+  "dice": [
+   [
+    1,
+    null
+   ],
+   [
+    null,
+    2
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "norway",
+  "attacker_power": "united_kingdom",
+  "amphibious": {
+   "inf": 1
+  },
+  "bombarders": {},
+  "bombard_slots": 1,
+  "defender_powers": [
+   "germany"
+  ],
+  "attackers": {
+   "inf": 1
+  },
+  "defenders": {
+   "inf": 3
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "germany",
+    "inf",
+    3
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "inf": 1
+  },
+  "defenders": {
+   "inf": 3
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795446447997",
+  "target": "norway"
+ }
+}

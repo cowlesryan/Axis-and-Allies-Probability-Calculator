@@ -1,0 +1,69 @@
+{
+ "name": "0078_ja2",
+ "tag": "ja2",
+ "captured": "2026-11-23 09:36:53",
+ "crop_box_1440p": [
+  374,
+  679,
+  1030,
+  968
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 700,
+  "bounds": [
+   414,
+   789,
+   990,
+   848
+  ],
+  "dice": [
+   [
+    4,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "sea_zone_12",
+  "attacker_power": "japan",
+  "defender_powers": [
+   "soviet_union"
+  ],
+  "attackers": {
+   "bb": 1
+  },
+  "defenders": {
+   "ftr": 2
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "soviet_union",
+    "ftr",
+    2
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "bb": 1
+  },
+  "defenders": {
+   "ftr": 2
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795443445444",
+  "target": "sea_zone_12"
+ }
+}

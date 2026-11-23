@@ -1,0 +1,91 @@
+{
+ "name": "0013_ge",
+ "tag": "ge",
+ "captured": "2026-11-23 03:37:40",
+ "crop_box_1440p": [
+  693,
+  183,
+  1574,
+  729
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1133,
+  "bounds": [
+   733,
+   293,
+   1534,
+   609
+  ],
+  "dice": [
+   [
+    1,
+    null
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    4,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "sea_zone_6",
+  "attacker_power": "germany",
+  "defender_powers": [
+   "united_kingdom",
+   "united_states"
+  ],
+  "attackers": {
+   "sub": 11,
+   "des": 12,
+   "bb": 13,
+   "car": 17
+  },
+  "defenders": {
+   "car": 8,
+   "bb": 9,
+   "des": 10,
+   "ftr": 12
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {
+    "trn": 3
+   }
+  },
+  "panel_aa": 0
+ },
+ "reader": {
+  "attackers": {
+   "sub": 11,
+   "bb": 13
+  },
+  "defenders": {
+   "bb": 9
+  },
+  "warnings": [
+   "attacker: unrecognised icon at x=919,y=293 (best score 0.20)",
+   "attacker: unrecognised icon at x=921,y=421 (best score 0.44)",
+   "defender: unrecognised icon at x=1209,y=421 (best score 0.31)",
+   "defender: unreadable count '?' at x=1327,y=421",
+   "defender: unreadable count '1?' at x=1480,y=421",
+   "defender: unrecognised icon at x=1371,y=549 (best score 0.50)",
+   "attacker: skipped an unreadable entry in the die-1 row",
+   "attacker: skipped an unreadable entry in the die-2 row",
+   "defender: skipped an unreadable entry in the die-2 row",
+   "defender: skipped an unreadable entry in the die-2 row",
+   "defender: skipped an unreadable entry in the die-4 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795422718888",
+  "target": "sea_zone_6"
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "name": "0011_ge",
+ "tag": "ge",
+ "captured": "2026-11-23 03:37:13",
+ "crop_box_1440p": [
+  484,
+  478,
+  1139,
+  1152
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 811,
+  "bounds": [
+   524,
+   588,
+   1099,
+   1032
+  ],
+  "dice": [
+   [
+    1,
+    1
+   ],
+   [
+    null,
+    2
+   ],
+   [
+    null,
+    3
+   ],
+   [
+    null,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "sea_zone_13",
+  "attacker_power": "germany",
+  "defender_powers": [
+   "united_kingdom"
+  ],
+  "attackers": {
+   "car": 5
+  },
+  "defenders": {
+   "bb": 57,
+   "cru": 60,
+   "sub": 67,
+   "car": 70
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {
+    "trn": 1
+   }
+  },
+  "panel_aa": 0
+ },
+ "reader": {
+  "attackers": {},
+  "defenders": {
+   "bb": 57
+  },
+  "warnings": [
+   "attacker: unrecognised icon at x=597,y=588 (best score 0.20)",
+   "defender: unrecognised icon at x=887,y=588 (best score 0.18)",
+   "defender: unrecognised icon at x=887,y=716 (best score 0.31)",
+   "defender: unreadable count '7?' at x=992,y=716",
+   "defender: unrecognised icon at x=887,y=844 (best score 0.13)",
+   "attacker: skipped an unreadable entry in the die-1 row",
+   "defender: skipped an unreadable entry in the die-1 row",
+   "defender: skipped an unreadable entry in the die-2 row",
+   "defender: skipped an unreadable entry in the die-3 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795422718888",
+  "target": "sea_zone_13"
+ }
+}

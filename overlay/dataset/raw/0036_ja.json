@@ -1,0 +1,102 @@
+{
+ "name": "0036_ja",
+ "tag": "ja",
+ "captured": "2026-11-23 04:08:53",
+ "crop_box_1440p": [
+  484,
+  621,
+  1365,
+  1039
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 924,
+  "bounds": [
+   524,
+   731,
+   1325,
+   919
+  ],
+  "dice": [
+   [
+    1,
+    1
+   ],
+   [
+    4,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "sea_zone_13",
+  "attacker_power": "japan",
+  "defender_powers": [
+   "soviet_union",
+   "united_kingdom",
+   "united_states"
+  ],
+  "attackers": {
+   "bmb": 4,
+   "car": 5,
+   "bb": 6
+  },
+  "defenders": {
+   "ftr": 1,
+   "bmb": 2,
+   "sub": 3,
+   "bb": 4
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {
+    "trn": 3
+   }
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "soviet_union",
+    "sub",
+    3
+   ],
+   [
+    "united_kingdom",
+    "bb",
+    4
+   ],
+   [
+    "united_kingdom",
+    "bmb",
+    2
+   ],
+   [
+    "united_states",
+    "ftr",
+    1
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "bmb": 4,
+   "car": 5,
+   "bb": 6
+  },
+  "defenders": {
+   "ftr": 1,
+   "bmb": 2,
+   "sub": 3,
+   "bb": 4
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795422744889",
+  "target": "sea_zone_13"
+ }
+}

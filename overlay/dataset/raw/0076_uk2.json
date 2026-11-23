@@ -1,0 +1,69 @@
+{
+ "name": "0076_uk2",
+ "tag": "uk2",
+ "captured": "2026-11-23 09:35:59",
+ "crop_box_1440p": [
+  968,
+  243,
+  1623,
+  533
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1294,
+  "bounds": [
+   1008,
+   353,
+   1583,
+   413
+  ],
+  "dice": [
+   [
+    3,
+    3
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "belorussia",
+  "attacker_power": "united_kingdom",
+  "defender_powers": [
+   "japan"
+  ],
+  "attackers": {
+   "tank": 8
+  },
+  "defenders": {
+   "tank": 9
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "japan",
+    "tank",
+    9
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "tank": 8
+  },
+  "defenders": {
+   "tank": 9
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795443441156",
+  "target": "belorussia"
+ }
+}

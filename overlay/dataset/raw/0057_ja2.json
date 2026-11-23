@@ -1,0 +1,69 @@
+{
+ "name": "0057_ja2",
+ "tag": "ja2",
+ "captured": "2026-11-23 09:26:06",
+ "crop_box_1440p": [
+  1134,
+  488,
+  1790,
+  778
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1461,
+  "bounds": [
+   1174,
+   598,
+   1750,
+   658
+  ],
+  "dice": [
+   [
+    2,
+    2
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "caucasus",
+  "attacker_power": "japan",
+  "defender_powers": [
+   "united_kingdom"
+  ],
+  "attackers": {
+   "art": 6
+  },
+  "defenders": {
+   "inf": 7
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "united_kingdom",
+    "inf",
+    7
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "art": 6
+  },
+  "defenders": {
+   "inf": 7
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795443445444",
+  "target": "caucasus"
+ }
+}

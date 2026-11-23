@@ -1,0 +1,144 @@
+{
+ "name": "0038_ja",
+ "tag": "ja",
+ "captured": "2026-11-23 04:09:03",
+ "crop_box_1440p": [
+  939,
+  392,
+  2147,
+  1195
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1379,
+  "bounds": [
+   979,
+   631,
+   2107,
+   1075
+  ],
+  "dice": [
+   [
+    1,
+    1
+   ],
+   [
+    null,
+    2
+   ],
+   [
+    3,
+    3
+   ],
+   [
+    4,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "egypt",
+  "attacker_power": "japan",
+  "defender_powers": [
+   "soviet_union",
+   "united_kingdom",
+   "united_states"
+  ],
+  "attackers": {
+   "ftr": 8,
+   "tank": 9,
+   "bmb": 10,
+   "inf": 11
+  },
+  "defenders": {
+   "inf": 68,
+   "tank": 78,
+   "art": 71,
+   "ftr": 1,
+   "bmb": 73,
+   "aa": 3
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {
+    "aa": 3
+   }
+  },
+  "panel_aa": 3,
+  "defender_entries": [
+   [
+    "soviet_union",
+    "art",
+    70
+   ],
+   [
+    "soviet_union",
+    "bmb",
+    73
+   ],
+   [
+    "united_kingdom",
+    "art",
+    1
+   ],
+   [
+    "united_kingdom",
+    "ftr",
+    1
+   ],
+   [
+    "united_kingdom",
+    "inf",
+    1
+   ],
+   [
+    "united_kingdom",
+    "tank",
+    1
+   ],
+   [
+    "united_states",
+    "inf",
+    67
+   ],
+   [
+    "united_states",
+    "tank",
+    77
+   ]
+  ],
+  "panel_aa_entries": [
+   [
+    "united_states",
+    3
+   ]
+  ]
+ },
+ "reader": {
+  "attackers": {
+   "ftr": 8,
+   "bmb": 10
+  },
+  "defenders": {
+   "inf": 68,
+   "art": 71,
+   "tank": 78,
+   "aa": 3,
+   "ftr": 1,
+   "bmb": 73
+  },
+  "warnings": [
+   "attacker: unrecognised icon at x=1184,y=631 (best score 0.38)",
+   "attacker: unrecognised icon at x=1002,y=887 (best score 0.45)",
+   "attacker: skipped an unreadable entry in the die-1 row",
+   "attacker: skipped an unreadable entry in the die-3 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795422744889",
+  "target": "egypt"
+ }
+}

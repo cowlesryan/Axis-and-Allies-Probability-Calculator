@@ -1,0 +1,77 @@
+{
+ "name": "0048_uk2",
+ "tag": "uk2",
+ "captured": "2026-11-23 09:19:08",
+ "crop_box_1440p": [
+  374,
+  679,
+  1142,
+  1096
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 814,
+  "bounds": [
+   414,
+   789,
+   1102,
+   976
+  ],
+  "dice": [
+   [
+    null,
+    1
+   ],
+   [
+    2,
+    null
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "sea_zone_12",
+  "attacker_power": "united_kingdom",
+  "defender_powers": [
+   "germany"
+  ],
+  "attackers": {
+   "sub": 3,
+   "des": 4
+  },
+  "defenders": {
+   "sub": 5
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "germany",
+    "sub",
+    5
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {},
+  "defenders": {
+   "sub": 5
+  },
+  "warnings": [
+   "attacker: unrecognised icon at x=441,y=917 (best score 0.55)",
+   "attacker: unrecognised icon at x=576,y=917 (best score 0.25)",
+   "attacker: skipped an unreadable entry in the die-2 row",
+   "attacker: skipped an unreadable entry in the die-2 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795443441156",
+  "target": "sea_zone_12"
+ }
+}

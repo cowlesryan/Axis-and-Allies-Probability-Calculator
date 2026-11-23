@@ -1,0 +1,7 @@
+# Pinned to the versions the overlay was built and tested with.
+Pillow==13.0.0
+numpy==2.4.6
+opencv-python-headless==5.1.0.95
+mss==10.2.0
+PySide6==6.12.0
+pytest==9.2.0

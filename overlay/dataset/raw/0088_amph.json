@@ -1,0 +1,95 @@
+{
+ "name": "0088_amph",
+ "tag": "amph",
+ "captured": "2026-11-23 10:01:10",
+ "crop_box_1440p": [
+  741,
+  349,
+  1396,
+  1152
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1068,
+  "bounds": [
+   781,
+   588,
+   1356,
+   1032
+  ],
+  "dice": [
+   [
+    1,
+    null
+   ],
+   [
+    null,
+    2
+   ],
+   [
+    null,
+    3
+   ],
+   [
+    4,
+    null
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "france",
+  "attacker_power": "united_kingdom",
+  "amphibious": {
+   "inf": 1
+  },
+  "bombarders": {
+   "bb": 1
+  },
+  "bombard_slots": 1,
+  "defender_powers": [
+   "germany"
+  ],
+  "attackers": {
+   "inf": 1,
+   "bb": 1
+  },
+  "defenders": {
+   "inf": 1,
+   "tank": 2
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {
+    "aa": 1
+   }
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "germany",
+    "inf",
+    1
+   ],
+   [
+    "germany",
+    "tank",
+    2
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "inf": 1,
+   "bb": 1
+  },
+  "defenders": {
+   "inf": 1,
+   "tank": 2
+  },
+  "warnings": [],
+  "matches_truth": true
+ }
+}

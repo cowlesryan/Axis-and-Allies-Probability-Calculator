@@ -1,0 +1,452 @@
+{
+ "game_id": "1795443453311",
+ "name": "Overlay united_states",
+ "power": "united_states",
+ "battles": [
+  {
+   "type": "land",
+   "target": "finland",
+   "origin": "karelia_ssr",
+   "attacker_power": "united_states",
+   "attackers": {
+    "inf": 4
+   },
+   "defenders": [
+    [
+     "japan",
+     "bmb",
+     5
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "inf": 4
+    },
+    "defenders": {
+     "bmb": 5
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "land",
+   "target": "baltic_states",
+   "origin": "karelia_ssr",
+   "attacker_power": "united_states",
+   "attackers": {
+    "art": 6
+   },
+   "defenders": [
+    [
+     "germany",
+     "inf",
+     7
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "art": 6
+    },
+    "defenders": {
+     "inf": 7
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "land",
+   "target": "belorussia",
+   "origin": "karelia_ssr",
+   "attacker_power": "united_states",
+   "attackers": {
+    "tank": 8
+   },
+   "defenders": [
+    [
+     "japan",
+     "tank",
+     9
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "tank": 8
+    },
+    "defenders": {
+     "tank": 9
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "land",
+   "target": "ukraine_ssr",
+   "origin": "caucasus",
+   "attacker_power": "united_states",
+   "attackers": {
+    "ftr": 1
+   },
+   "defenders": [
+    [
+     "germany",
+     "tank",
+     2
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "ftr": 1
+    },
+    "defenders": {
+     "tank": 2
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "land",
+   "target": "west_russia",
+   "origin": "archangel",
+   "attacker_power": "united_states",
+   "attackers": {
+    "bmb": 3
+   },
+   "defenders": [
+    [
+     "japan",
+     "ftr",
+     4
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "bmb": 3
+    },
+    "defenders": {
+     "ftr": 4
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "land",
+   "target": "libya",
+   "origin": "egypt",
+   "attacker_power": "united_states",
+   "attackers": {
+    "inf": 5,
+    "art": 6
+   },
+   "defenders": [
+    [
+     "germany",
+     "inf",
+     7
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "inf": 5,
+     "art": 6
+    },
+    "defenders": {
+     "inf": 7
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "land",
+   "target": "french_indochina_thailand",
+   "origin": "burma",
+   "attacker_power": "united_states",
+   "attackers": {
+    "tank": 8,
+    "inf": 9
+   },
+   "defenders": [
+    [
+     "japan",
+     "inf",
+     11
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "tank": 8,
+     "inf": 9
+    },
+    "defenders": {
+     "inf": 11
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "sea",
+   "target": "sea_zone_3",
+   "origin": "sea_zone_2",
+   "attacker_power": "united_states",
+   "attackers": {
+    "car": 12
+   },
+   "defenders": [
+    [
+     "germany",
+     "sub",
+     1
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "car": 12
+    },
+    "defenders": {
+     "sub": 1
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "sea",
+   "target": "sea_zone_4",
+   "origin": "sea_zone_3",
+   "attacker_power": "united_states",
+   "attackers": {
+    "sub": 2
+   },
+   "defenders": [
+    [
+     "japan",
+     "des",
+     3
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "sub": 2
+    },
+    "defenders": {
+     "des": 3
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "sea",
+   "target": "sea_zone_6",
+   "origin": "sea_zone_3",
+   "attacker_power": "united_states",
+   "attackers": {
+    "des": 4
+   },
+   "defenders": [
+    [
+     "germany",
+     "car",
+     5
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "des": 4
+    },
+    "defenders": {
+     "car": 5
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "sea",
+   "target": "sea_zone_7",
+   "origin": "sea_zone_2",
+   "attacker_power": "united_states",
+   "attackers": {
+    "cru": 6
+   },
+   "defenders": [
+    [
+     "japan",
+     "cru",
+     7
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "cru": 6
+    },
+    "defenders": {
+     "cru": 7
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "sea",
+   "target": "sea_zone_8",
+   "origin": "sea_zone_13",
+   "attacker_power": "united_states",
+   "attackers": {
+    "bb": 8
+   },
+   "defenders": [
+    [
+     "germany",
+     "bb",
+     9
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "bb": 8
+    },
+    "defenders": {
+     "bb": 9
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "sea",
+   "target": "sea_zone_10",
+   "origin": "sea_zone_1",
+   "attacker_power": "united_states",
+   "attackers": {
+    "bb": 1
+   },
+   "defenders": [
+    [
+     "japan",
+     "ftr",
+     2
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "bb": 1
+    },
+    "defenders": {
+     "ftr": 2
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "sea",
+   "target": "sea_zone_12",
+   "origin": "sea_zone_10",
+   "attacker_power": "united_states",
+   "attackers": {
+    "sub": 3,
+    "des": 4
+   },
+   "defenders": [
+    [
+     "germany",
+     "sub",
+     5
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "sub": 3,
+     "des": 4
+    },
+    "defenders": {
+     "sub": 5
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  }
+ ],
+ "planned_coverage": {
+  "attacker_kinds": {},
+  "defender_cells": {},
+  "layouts": {}
+ }
+}

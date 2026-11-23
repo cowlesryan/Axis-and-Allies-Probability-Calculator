@@ -1,0 +1,87 @@
+{
+ "name": "0005_su",
+ "tag": "su",
+ "captured": "2026-11-23 02:48:28",
+ "crop_box_1440p": [
+  796,
+  393,
+  1677,
+  1195
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1236,
+  "bounds": [
+   836,
+   632,
+   1637,
+   1075
+  ],
+  "dice": [
+   [
+    null,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    3,
+    null
+   ],
+   [
+    4,
+    null
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "libya",
+  "attacker_power": "soviet_union",
+  "defender_powers": [
+   "germany"
+  ],
+  "attackers": {
+   "art": 13,
+   "tank": 17,
+   "ftr": 20,
+   "bmb": 24
+  },
+  "defenders": {
+   "inf": 31,
+   "art": 37,
+   "aa": 1
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {
+    "aa": 1
+   }
+  },
+  "panel_aa": 1
+ },
+ "reader": {
+  "attackers": {
+   "art": 13,
+   "tank": 17,
+   "bmb": 24
+  },
+  "defenders": {
+   "inf": 31,
+   "art": 37,
+   "aa": 1
+  },
+  "warnings": [
+   "attacker: unrecognised icon at x=999,y=888 (best score 0.54)",
+   "attacker: skipped an unreadable entry in the die-3 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795419615440",
+  "target": "libya"
+ }
+}

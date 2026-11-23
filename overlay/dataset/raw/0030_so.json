@@ -1,0 +1,74 @@
+{
+ "name": "0030_so",
+ "tag": "so",
+ "captured": "2026-11-23 04:04:59",
+ "crop_box_1440p": [
+  637,
+  658,
+  1292,
+  1076
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 964,
+  "bounds": [
+   677,
+   768,
+   1252,
+   956
+  ],
+  "dice": [
+   [
+    1,
+    null
+   ],
+   [
+    null,
+    2
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "sea_zone_14",
+  "attacker_power": "soviet_union",
+  "defender_powers": [
+   "japan"
+  ],
+  "attackers": {
+   "car": 8
+  },
+  "defenders": {
+   "des": 37
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "japan",
+    "des",
+    37
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {},
+  "defenders": {
+   "des": 37
+  },
+  "warnings": [
+   "attacker: unrecognised icon at x=748,y=768 (best score 0.50)",
+   "attacker: skipped an unreadable entry in the die-1 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795422730785",
+  "target": "sea_zone_14"
+ }
+}

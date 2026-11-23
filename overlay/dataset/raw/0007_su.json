@@ -1,0 +1,74 @@
+{
+ "name": "0007_su",
+ "tag": "su",
+ "captured": "2026-11-23 02:49:02",
+ "crop_box_1440p": [
+  968,
+  243,
+  1848,
+  660
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1407,
+  "bounds": [
+   1008,
+   353,
+   1808,
+   540
+  ],
+  "dice": [
+   [
+    2,
+    2
+   ],
+   [
+    null,
+    3
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "belorussia",
+  "attacker_power": "soviet_union",
+  "defender_powers": [
+   "germany",
+   "japan"
+  ],
+  "attackers": {
+   "inf": 2,
+   "art": 3
+  },
+  "defenders": {
+   "inf": 2,
+   "art": 3,
+   "tank": 4
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0
+ },
+ "reader": {
+  "attackers": {
+   "inf": 2,
+   "art": 3
+  },
+  "defenders": {
+   "inf": 2,
+   "art": 3
+  },
+  "warnings": [
+   "defender: unrecognised icon at x=1482,y=481 (best score 0.44)",
+   "defender: skipped an unreadable entry in the die-3 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795419615440",
+  "target": "belorussia"
+ }
+}

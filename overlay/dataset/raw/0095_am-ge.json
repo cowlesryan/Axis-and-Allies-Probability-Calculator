@@ -1,0 +1,82 @@
+{
+ "name": "0095_am-ge",
+ "tag": "am-ge",
+ "captured": "2026-11-23 10:10:12",
+ "crop_box_1440p": [
+  633,
+  337,
+  1400,
+  755
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1073,
+  "bounds": [
+   673,
+   447,
+   1360,
+   635
+  ],
+  "dice": [
+   [
+    3,
+    null
+   ],
+   [
+    null,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "united_kingdom",
+  "attacker_power": "germany",
+  "amphibious": {
+   "tank": 1
+  },
+  "bombarders": {
+   "cru": 1
+  },
+  "bombard_slots": 1,
+  "defender_powers": [
+   "united_kingdom"
+  ],
+  "attackers": {
+   "tank": 1,
+   "cru": 1
+  },
+  "defenders": {
+   "ftr": 2
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "united_kingdom",
+    "ftr",
+    2
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "tank": 1,
+   "cru": 1
+  },
+  "defenders": {
+   "ftr": 2
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795446451632",
+  "target": "united_kingdom"
+ }
+}

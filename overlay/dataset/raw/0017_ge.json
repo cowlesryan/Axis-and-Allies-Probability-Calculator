@@ -1,0 +1,117 @@
+{
+ "name": "0017_ge",
+ "tag": "ge",
+ "captured": "2026-11-23 03:47:16",
+ "crop_box_1440p": [
+  637,
+  521,
+  1517,
+  1195
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1076,
+  "bounds": [
+   677,
+   631,
+   1477,
+   1075
+  ],
+  "dice": [
+   [
+    null,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    3,
+    3
+   ],
+   [
+    4,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "sea_zone_14",
+  "attacker_power": "germany",
+  "defender_powers": [
+   "soviet_union",
+   "united_kingdom",
+   "united_states"
+  ],
+  "attackers": {
+   "sub": 6,
+   "bmb": 7,
+   "cru": 8,
+   "bb": 9
+  },
+  "defenders": {
+   "cru": 74,
+   "car": 77,
+   "sub": 78,
+   "ftr": 80
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "soviet_union",
+    "ftr",
+    80
+   ],
+   [
+    "soviet_union",
+    "sub",
+    78
+   ],
+   [
+    "united_kingdom",
+    "cru",
+    1
+   ],
+   [
+    "united_states",
+    "car",
+    77
+   ],
+   [
+    "united_states",
+    "cru",
+    73
+   ]
+  ]
+ },
+ "reader": {
+  "attackers": {
+   "bmb": 7,
+   "sub": 6,
+   "cru": 8,
+   "bb": 9
+  },
+  "defenders": {
+   "ftr": 80,
+   "sub": 78,
+   "des": 77,
+   "cru": 1
+  },
+  "warnings": [
+   "defender: unrecognised icon at x=1153,y=887 (best score 0.49)",
+   "defender: skipped an unreadable entry in the die-3 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795422718888",
+  "target": "sea_zone_14"
+ }
+}

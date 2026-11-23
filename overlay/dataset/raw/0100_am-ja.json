@@ -1,0 +1,82 @@
+{
+ "name": "0100_am-ja",
+ "tag": "am-ja",
+ "captured": "2026-11-23 10:12:08",
+ "crop_box_1440p": [
+  1736,
+  206,
+  2504,
+  624
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 2176,
+  "bounds": [
+   1776,
+   316,
+   2464,
+   504
+  ],
+  "dice": [
+   [
+    3,
+    null
+   ],
+   [
+    null,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "buryatia_ssr",
+  "attacker_power": "japan",
+  "amphibious": {
+   "tank": 1
+  },
+  "bombarders": {
+   "cru": 1
+  },
+  "bombard_slots": 1,
+  "defender_powers": [
+   "soviet_union"
+  ],
+  "attackers": {
+   "tank": 1,
+   "cru": 1
+  },
+  "defenders": {
+   "ftr": 2
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "soviet_union",
+    "ftr",
+    2
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "tank": 1,
+   "cru": 1
+  },
+  "defenders": {
+   "ftr": 2
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795446459122",
+  "target": "buryatia_ssr"
+ }
+}

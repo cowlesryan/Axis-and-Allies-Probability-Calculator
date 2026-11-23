@@ -1,0 +1,142 @@
+{
+ "name": "0018_ge",
+ "tag": "ge",
+ "captured": "2026-11-23 03:47:30",
+ "crop_box_1440p": [
+  939,
+  392,
+  2147,
+  1195
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1379,
+  "bounds": [
+   979,
+   631,
+   2107,
+   1075
+  ],
+  "dice": [
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    3,
+    3
+   ],
+   [
+    4,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "egypt",
+  "attacker_power": "germany",
+  "defender_powers": [
+   "soviet_union",
+   "united_kingdom",
+   "united_states"
+  ],
+  "attackers": {
+   "ftr": 9,
+   "bmb": 10,
+   "art": 11,
+   "inf": 12
+  },
+  "defenders": {
+   "inf": 13,
+   "tank": 11,
+   "art": 15,
+   "ftr": 10,
+   "aa": 3
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {
+    "aa": 3
+   }
+  },
+  "panel_aa": 3,
+  "defender_entries": [
+   [
+    "soviet_union",
+    "ftr",
+    9
+   ],
+   [
+    "united_kingdom",
+    "art",
+    1
+   ],
+   [
+    "united_kingdom",
+    "ftr",
+    1
+   ],
+   [
+    "united_kingdom",
+    "inf",
+    1
+   ],
+   [
+    "united_kingdom",
+    "tank",
+    1
+   ],
+   [
+    "united_states",
+    "art",
+    14
+   ],
+   [
+    "united_states",
+    "inf",
+    12
+   ],
+   [
+    "united_states",
+    "tank",
+    10
+   ]
+  ]
+ },
+ "reader": {
+  "attackers": {
+   "inf": 12,
+   "art": 11,
+   "ftr": 9,
+   "bmb": 10
+  },
+  "defenders": {
+   "art": 14,
+   "tank": 1,
+   "ftr": 10
+  },
+  "warnings": [
+   "defender: unrecognised icon at x=1467,y=631 (best score 0.31)",
+   "defender: unrecognised icon at x=1618,y=759 (best score 0.39)",
+   "defender: unrecognised icon at x=1808,y=759 (best score 0.51)",
+   "defender: unrecognised icon at x=1965,y=759 (best score 0.44)",
+   "defender: unrecognised icon at x=1455,y=887 (best score 0.54)",
+   "defender: skipped an unreadable entry in the die-1 row",
+   "defender: skipped an unreadable entry in the die-2 row",
+   "defender: skipped an unreadable entry in the die-2 row",
+   "defender: skipped an unreadable entry in the die-2 row",
+   "defender: skipped an unreadable entry in the die-3 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795422718888",
+  "target": "egypt"
+ }
+}

@@ -1,0 +1,111 @@
+{
+ "name": "0026_ge",
+ "tag": "ge",
+ "captured": "2026-11-23 04:00:15",
+ "crop_box_1440p": [
+  1138,
+  186,
+  1906,
+  989
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1465,
+  "bounds": [
+   1178,
+   425,
+   1866,
+   869
+  ],
+  "dice": [
+   [
+    1,
+    1
+   ],
+   [
+    null,
+    2
+   ],
+   [
+    null,
+    3
+   ],
+   [
+    null,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "archangel",
+  "attacker_power": "germany",
+  "defender_powers": [
+   "soviet_union"
+  ],
+  "attackers": {
+   "inf": 13
+  },
+  "defenders": {
+   "inf": 32,
+   "tank": 1,
+   "ftr": 20,
+   "art": 23,
+   "bmb": 30
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {
+    "aa": 2
+   }
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "soviet_union",
+    "art",
+    23
+   ],
+   [
+    "soviet_union",
+    "bmb",
+    30
+   ],
+   [
+    "soviet_union",
+    "ftr",
+    20
+   ],
+   [
+    "soviet_union",
+    "inf",
+    32
+   ],
+   [
+    "soviet_union",
+    "tank",
+    1
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "inf": 13
+  },
+  "defenders": {
+   "inf": 32,
+   "art": 23,
+   "tank": 1,
+   "ftr": 20,
+   "bmb": 30
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795422718888",
+  "target": "archangel"
+ }
+}

@@ -1,0 +1,88 @@
+{
+ "name": "0102_am-uk",
+ "tag": "am-uk",
+ "captured": "2026-11-23 10:38:13",
+ "crop_box_1440p": [
+  724,
+  293,
+  1491,
+  839
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1164,
+  "bounds": [
+   764,
+   403,
+   1451,
+   719
+  ],
+  "dice": [
+   [
+    2,
+    null
+   ],
+   [
+    null,
+    3
+   ],
+   [
+    4,
+    null
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "finland",
+  "attacker_power": "united_kingdom",
+  "amphibious": {
+   "art": 1
+  },
+  "bombarders": {
+   "bb": 1
+  },
+  "bombard_slots": 1,
+  "defender_powers": [
+   "germany"
+  ],
+  "attackers": {
+   "art": 1,
+   "bmb": 1,
+   "bb": 1
+  },
+  "defenders": {
+   "tank": 2
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "germany",
+    "tank",
+    2
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "art": 1,
+   "bmb": 1,
+   "bb": 1
+  },
+  "defenders": {
+   "tank": 2
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795446447997",
+  "target": "finland"
+ }
+}

@@ -1,0 +1,128 @@
+{
+ "name": "0033_so",
+ "tag": "so",
+ "captured": "2026-11-23 04:05:14",
+ "crop_box_1440p": [
+  918,
+  216,
+  1798,
+  890
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1358,
+  "bounds": [
+   958,
+   326,
+   1758,
+   770
+  ],
+  "dice": [
+   [
+    null,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    3,
+    3
+   ],
+   [
+    4,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "baltic_states",
+  "attacker_power": "soviet_union",
+  "defender_powers": [
+   "germany",
+   "japan"
+  ],
+  "attackers": {
+   "bmb": 10,
+   "inf": 11,
+   "art": 12,
+   "tank": 13
+  },
+  "defenders": {
+   "inf": 13,
+   "tank": 1,
+   "bmb": 10,
+   "art": 14,
+   "ftr": 20,
+   "aa": 2
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {
+    "aa": 2
+   }
+  },
+  "panel_aa": 2,
+  "defender_entries": [
+   [
+    "germany",
+    "inf",
+    13
+   ],
+   [
+    "germany",
+    "tank",
+    1
+   ],
+   [
+    "japan",
+    "art",
+    14
+   ],
+   [
+    "japan",
+    "bmb",
+    10
+   ],
+   [
+    "japan",
+    "ftr",
+    20
+   ]
+  ],
+  "panel_aa_entries": [
+   [
+    "japan",
+    2
+   ]
+  ]
+ },
+ "reader": {
+  "attackers": {
+   "inf": 11,
+   "art": 12,
+   "tank": 13,
+   "bmb": 10
+  },
+  "defenders": {
+   "art": 14,
+   "tank": 1,
+   "ftr": 20,
+   "bmb": 10
+  },
+  "warnings": [
+   "defender: unrecognised icon at x=1578,y=326 (best score 0.35)",
+   "defender: unrecognised icon at x=1578,y=454 (best score 0.53)",
+   "defender: skipped an unreadable entry in the die-1 row",
+   "defender: skipped an unreadable entry in the die-2 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795422730785",
+  "target": "baltic_states"
+ }
+}

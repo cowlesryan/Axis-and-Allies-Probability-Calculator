@@ -1,0 +1,304 @@
+{
+ "game_id": "1795446447997",
+ "name": "Overlay united_kingdom",
+ "power": "united_kingdom",
+ "battles": [
+  {
+   "type": "amphibious",
+   "target": "norway",
+   "origin": "iceland",
+   "sea": "sea_zone_3",
+   "attacker_power": "united_kingdom",
+   "attackers": {
+    "inf": 1
+   },
+   "defenders": [],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "inf": 1
+    },
+    "defenders": {
+     "inf": 3
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0,
+    "amphibious": {
+     "inf": 1
+    },
+    "bombarders": {},
+    "bombard_slots": 1
+   }
+  },
+  {
+   "type": "amphibious",
+   "target": "finland",
+   "origin": "iceland",
+   "sea": "sea_zone_3",
+   "attacker_power": "united_kingdom",
+   "attackers": {
+    "art": 1,
+    "bmb": 1,
+    "bb": 1
+   },
+   "defenders": [],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "art": 1,
+     "bmb": 1,
+     "bb": 1
+    },
+    "defenders": {
+     "tank": 2
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0,
+    "amphibious": {
+     "art": 1
+    },
+    "bombarders": {
+     "bb": 1
+    },
+    "bombard_slots": 1
+   }
+  },
+  {
+   "type": "amphibious",
+   "target": "france",
+   "origin": "gibraltar",
+   "sea": "sea_zone_14",
+   "attacker_power": "united_kingdom",
+   "attackers": {
+    "tank": 1,
+    "cru": 1
+   },
+   "defenders": [],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "tank": 1,
+     "cru": 1
+    },
+    "defenders": {
+     "ftr": 2
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0,
+    "amphibious": {
+     "tank": 1
+    },
+    "bombarders": {
+     "cru": 1
+    },
+    "bombard_slots": 1
+   }
+  },
+  {
+   "type": "amphibious",
+   "target": "algeria",
+   "origin": "gibraltar",
+   "sea": "sea_zone_14",
+   "attacker_power": "united_kingdom",
+   "attackers": {
+    "inf": 2,
+    "bb": 1,
+    "cru": 1
+   },
+   "defenders": [],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "inf": 2,
+     "bb": 1,
+     "cru": 1
+    },
+    "defenders": {
+     "bmb": 1,
+     "inf": 2
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0,
+    "amphibious": {
+     "inf": 2
+    },
+    "bombarders": {
+     "bb": 1,
+     "cru": 1
+    },
+    "bombard_slots": 2
+   }
+  },
+  {
+   "type": "amphibious",
+   "target": "northwestern_europe",
+   "origin": "united_kingdom",
+   "sea": "sea_zone_6",
+   "attacker_power": "united_kingdom",
+   "attackers": {
+    "art": 1,
+    "inf": 1,
+    "ftr": 2,
+    "bmb": 1,
+    "bb": 2
+   },
+   "defenders": [],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "art": 1,
+     "inf": 1,
+     "ftr": 2,
+     "bmb": 1,
+     "bb": 2
+    },
+    "defenders": {
+     "inf": 12
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0,
+    "amphibious": {
+     "art": 1,
+     "inf": 1
+    },
+    "bombarders": {
+     "bb": 2
+    },
+    "bombard_slots": 2
+   }
+  },
+  {
+   "type": "amphibious",
+   "target": "morocco",
+   "origin": "gibraltar",
+   "sea": "sea_zone_13",
+   "attacker_power": "united_kingdom",
+   "attackers": {
+    "tank": 1,
+    "inf": 1,
+    "ftr": 1
+   },
+   "defenders": [],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "tank": 1,
+     "inf": 1,
+     "ftr": 1
+    },
+    "defenders": {
+     "inf": 3
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0,
+    "amphibious": {
+     "tank": 1,
+     "inf": 1
+    },
+    "bombarders": {},
+    "bombard_slots": 2
+   }
+  },
+  {
+   "type": "amphibious",
+   "target": "french_indochina_thailand",
+   "origin": "burma",
+   "sea": "sea_zone_36",
+   "attacker_power": "united_kingdom",
+   "attackers": {
+    "art": 1,
+    "inf": 2,
+    "cru": 2
+   },
+   "defenders": [],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "art": 1,
+     "inf": 2,
+     "cru": 2
+    },
+    "defenders": {
+     "tank": 2
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0,
+    "amphibious": {
+     "art": 1,
+     "inf": 2
+    },
+    "bombarders": {
+     "cru": 2
+    },
+    "bombard_slots": 3
+   }
+  },
+  {
+   "type": "amphibious",
+   "target": "malaya",
+   "origin": "burma",
+   "sea": "sea_zone_36",
+   "attacker_power": "united_kingdom",
+   "attackers": {
+    "tank": 1,
+    "inf": 3
+   },
+   "defenders": [],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "tank": 1,
+     "inf": 3
+    },
+    "defenders": {
+     "ftr": 2
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0,
+    "amphibious": {
+     "tank": 1,
+     "inf": 3
+    },
+    "bombarders": {},
+    "bombard_slots": 4
+   }
+  }
+ ],
+ "planned_coverage": {
+  "attacker_kinds": {},
+  "defender_cells": {},
+  "layouts": {}
+ }
+}

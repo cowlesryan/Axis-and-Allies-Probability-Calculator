@@ -1,0 +1,452 @@
+{
+ "game_id": "1795443445444",
+ "name": "Overlay japan",
+ "power": "japan",
+ "battles": [
+  {
+   "type": "land",
+   "target": "karelia_ssr",
+   "origin": "baltic_states",
+   "attacker_power": "japan",
+   "attackers": {
+    "inf": 4
+   },
+   "defenders": [
+    [
+     "soviet_union",
+     "bmb",
+     5
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "inf": 4
+    },
+    "defenders": {
+     "bmb": 5
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "land",
+   "target": "caucasus",
+   "origin": "ukraine_ssr",
+   "attacker_power": "japan",
+   "attackers": {
+    "art": 6
+   },
+   "defenders": [
+    [
+     "united_kingdom",
+     "inf",
+     7
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "art": 6
+    },
+    "defenders": {
+     "inf": 7
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "land",
+   "target": "egypt",
+   "origin": "libya",
+   "attacker_power": "japan",
+   "attackers": {
+    "tank": 8
+   },
+   "defenders": [
+    [
+     "united_states",
+     "tank",
+     9
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "tank": 8
+    },
+    "defenders": {
+     "tank": 9
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "land",
+   "target": "archangel",
+   "origin": "west_russia",
+   "attacker_power": "japan",
+   "attackers": {
+    "ftr": 1
+   },
+   "defenders": [
+    [
+     "soviet_union",
+     "tank",
+     2
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "ftr": 1
+    },
+    "defenders": {
+     "tank": 2
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "land",
+   "target": "anhwei",
+   "origin": "kiangsu",
+   "attacker_power": "japan",
+   "attackers": {
+    "bmb": 3
+   },
+   "defenders": [
+    [
+     "united_kingdom",
+     "ftr",
+     4
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "bmb": 3
+    },
+    "defenders": {
+     "ftr": 4
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "land",
+   "target": "burma",
+   "origin": "french_indochina_thailand",
+   "attacker_power": "japan",
+   "attackers": {
+    "inf": 5,
+    "art": 6
+   },
+   "defenders": [
+    [
+     "united_states",
+     "inf",
+     7
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "inf": 5,
+     "art": 6
+    },
+    "defenders": {
+     "inf": 7
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "land",
+   "target": "buryatia_ssr",
+   "origin": "manchuria",
+   "attacker_power": "japan",
+   "attackers": {
+    "tank": 8,
+    "inf": 9
+   },
+   "defenders": [
+    [
+     "soviet_union",
+     "inf",
+     11
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "tank": 8,
+     "inf": 9
+    },
+    "defenders": {
+     "inf": 11
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "sea",
+   "target": "sea_zone_3",
+   "origin": "sea_zone_2",
+   "attacker_power": "japan",
+   "attackers": {
+    "car": 12
+   },
+   "defenders": [
+    [
+     "united_kingdom",
+     "sub",
+     1
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "car": 12
+    },
+    "defenders": {
+     "sub": 1
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "sea",
+   "target": "sea_zone_5",
+   "origin": "sea_zone_6",
+   "attacker_power": "japan",
+   "attackers": {
+    "sub": 2
+   },
+   "defenders": [
+    [
+     "united_states",
+     "des",
+     3
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "sub": 2
+    },
+    "defenders": {
+     "des": 3
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "sea",
+   "target": "sea_zone_6",
+   "origin": "sea_zone_3",
+   "attacker_power": "japan",
+   "attackers": {
+    "des": 4
+   },
+   "defenders": [
+    [
+     "soviet_union",
+     "car",
+     5
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "des": 4
+    },
+    "defenders": {
+     "car": 5
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "sea",
+   "target": "sea_zone_8",
+   "origin": "sea_zone_13",
+   "attacker_power": "japan",
+   "attackers": {
+    "cru": 6
+   },
+   "defenders": [
+    [
+     "united_kingdom",
+     "cru",
+     7
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "cru": 6
+    },
+    "defenders": {
+     "cru": 7
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "sea",
+   "target": "sea_zone_9",
+   "origin": "sea_zone_10",
+   "attacker_power": "japan",
+   "attackers": {
+    "bb": 8
+   },
+   "defenders": [
+    [
+     "united_states",
+     "bb",
+     9
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "bb": 8
+    },
+    "defenders": {
+     "bb": 9
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "sea",
+   "target": "sea_zone_12",
+   "origin": "sea_zone_10",
+   "attacker_power": "japan",
+   "attackers": {
+    "bb": 1
+   },
+   "defenders": [
+    [
+     "soviet_union",
+     "ftr",
+     2
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "bb": 1
+    },
+    "defenders": {
+     "ftr": 2
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  },
+  {
+   "type": "sea",
+   "target": "sea_zone_13",
+   "origin": "sea_zone_12",
+   "attacker_power": "japan",
+   "attackers": {
+    "sub": 3,
+    "des": 4
+   },
+   "defenders": [
+    [
+     "united_kingdom",
+     "sub",
+     5
+    ]
+   ],
+   "hidden_defenders": {},
+   "prediction": 50,
+   "truth": {
+    "attackers": {
+     "sub": 3,
+     "des": 4
+    },
+    "defenders": {
+     "sub": 5
+    },
+    "hidden": {
+     "attackers": {},
+     "defenders": {}
+    },
+    "panel_aa": 0
+   }
+  }
+ ],
+ "planned_coverage": {
+  "attacker_kinds": {},
+  "defender_cells": {},
+  "layouts": {}
+ }
+}

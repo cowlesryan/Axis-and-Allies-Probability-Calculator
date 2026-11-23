@@ -1,0 +1,106 @@
+{
+ "name": "0019_ge",
+ "tag": "ge",
+ "captured": "2026-11-23 03:48:07",
+ "crop_box_1440p": [
+  1419,
+  520,
+  2350,
+  1195
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1746,
+  "bounds": [
+   1459,
+   759,
+   2310,
+   1075
+  ],
+  "dice": [
+   [
+    1,
+    1
+   ],
+   [
+    null,
+    2
+   ],
+   [
+    null,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "szechwan",
+  "attacker_power": "germany",
+  "defender_powers": [
+   "soviet_union",
+   "united_states"
+  ],
+  "attackers": {
+   "inf": 3
+  },
+  "defenders": {
+   "inf": 91,
+   "ftr": 1,
+   "art": 88,
+   "bmb": 90
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "soviet_union",
+    "inf",
+    89
+   ],
+   [
+    "united_states",
+    "art",
+    88
+   ],
+   [
+    "united_states",
+    "bmb",
+    90
+   ],
+   [
+    "united_states",
+    "ftr",
+    1
+   ],
+   [
+    "united_states",
+    "inf",
+    2
+   ]
+  ]
+ },
+ "reader": {
+  "attackers": {
+   "inf": 3
+  },
+  "defenders": {
+   "inf": 89,
+   "art": 88,
+   "ftr": 1,
+   "bmb": 90
+  },
+  "warnings": [
+   "defender: unrecognised icon at x=2175,y=887 (best score 0.53)",
+   "defender: skipped an unreadable entry in the die-2 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795422718888",
+  "target": "szechwan"
+ }
+}

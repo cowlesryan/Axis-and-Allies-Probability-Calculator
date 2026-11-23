@@ -1,0 +1,81 @@
+{
+ "name": "0008_su_indochina",
+ "tag": "su_indochina",
+ "captured": "2026-11-23 02:51:56",
+ "crop_box_1440p": [
+  656,
+  686,
+  1424,
+  1359
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1096,
+  "bounds": [
+   696,
+   796,
+   1384,
+   1239
+  ],
+  "dice": [
+   [
+    null,
+    1
+   ],
+   [
+    null,
+    2
+   ],
+   [
+    3,
+    3
+   ],
+   [
+    4,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "french_indochina_thailand",
+  "attacker_power": "soviet_union",
+  "defender_powers": [
+   "japan"
+  ],
+  "attackers": {
+   "tank": 8,
+   "ftr": 9,
+   "bmb": 10
+  },
+  "defenders": {
+   "inf": 9,
+   "tank": 10,
+   "bmb": 12,
+   "ftr": 14
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0
+ },
+ "reader": {
+  "attackers": {
+   "ftr": 9,
+   "bmb": 10
+  },
+  "defenders": {
+   "ftr": 14,
+   "bmb": 12
+  },
+  "warnings": [
+   "defender: unrecognised icon at x=1193,y=924 (best score 0.44)",
+   "defender: unrecognised icon at x=1171,y=1052 (best score 0.45)",
+   "defender: skipped an unreadable entry in the die-2 row",
+   "defender: skipped an unreadable entry in the die-3 row"
+  ],
+  "matches_truth": false
+ }
+}

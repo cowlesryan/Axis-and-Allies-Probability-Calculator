@@ -1,0 +1,100 @@
+{
+ "name": "0097_am-so",
+ "tag": "am-so",
+ "captured": "2026-11-23 10:10:59",
+ "crop_box_1440p": [
+  1681,
+  368,
+  2336,
+  1042
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 2008,
+  "bounds": [
+   1721,
+   478,
+   2296,
+   922
+  ],
+  "dice": [
+   [
+    1,
+    1
+   ],
+   [
+    null,
+    2
+   ],
+   [
+    3,
+    null
+   ],
+   [
+    4,
+    null
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "manchuria",
+  "attacker_power": "soviet_union",
+  "amphibious": {
+   "inf": 2
+  },
+  "bombarders": {
+   "bb": 1,
+   "cru": 1
+  },
+  "bombard_slots": 2,
+  "defender_powers": [
+   "japan"
+  ],
+  "attackers": {
+   "inf": 2,
+   "bb": 1,
+   "cru": 1
+  },
+  "defenders": {
+   "bmb": 1,
+   "inf": 2
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "japan",
+    "bmb",
+    1
+   ],
+   [
+    "japan",
+    "inf",
+    2
+   ]
+  ],
+  "panel_aa_entries": []
+ },
+ "reader": {
+  "attackers": {
+   "inf": 2,
+   "cru": 1,
+   "bb": 1
+  },
+  "defenders": {
+   "inf": 2,
+   "bmb": 1
+  },
+  "warnings": [],
+  "matches_truth": true
+ },
+ "source": {
+  "game_id": "1795446455410",
+  "target": "manchuria"
+ }
+}

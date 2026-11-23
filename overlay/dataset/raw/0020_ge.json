@@ -1,0 +1,110 @@
+{
+ "name": "0020_ge",
+ "tag": "ge",
+ "captured": "2026-11-23 03:48:18",
+ "crop_box_1440p": [
+  1560,
+  364,
+  2492,
+  1039
+ ],
+ "screen_height_1440p": 1440,
+ "panel": {
+  "cx": 1887,
+  "bounds": [
+   1600,
+   603,
+   2452,
+   919
+  ],
+  "dice": [
+   [
+    null,
+    2
+   ],
+   [
+    3,
+    3
+   ],
+   [
+    null,
+    4
+   ]
+  ]
+ },
+ "truth": {
+  "round": 1,
+  "phase": "combatMove",
+  "region": "anhwei",
+  "attacker_power": "germany",
+  "defender_powers": [
+   "soviet_union",
+   "united_kingdom",
+   "united_states"
+  ],
+  "attackers": {
+   "tank": 17
+  },
+  "defenders": {
+   "inf": 39,
+   "art": 38,
+   "tank": 40,
+   "ftr": 48
+  },
+  "hidden": {
+   "attackers": {},
+   "defenders": {}
+  },
+  "panel_aa": 0,
+  "defender_entries": [
+   [
+    "soviet_union",
+    "tank",
+    40
+   ],
+   [
+    "united_kingdom",
+    "art",
+    38
+   ],
+   [
+    "united_kingdom",
+    "inf",
+    37
+   ],
+   [
+    "united_states",
+    "ftr",
+    48
+   ],
+   [
+    "united_states",
+    "inf",
+    2
+   ]
+  ]
+ },
+ "reader": {
+  "attackers": {
+   "tank": 17
+  },
+  "defenders": {
+   "ftr": 48
+  },
+  "warnings": [
+   "defender: unrecognised icon at x=1964,y=603 (best score 0.39)",
+   "defender: unrecognised icon at x=2151,y=603 (best score 0.51)",
+   "defender: unrecognised icon at x=2317,y=603 (best score 0.54)",
+   "defender: unrecognised icon at x=1962,y=731 (best score 0.49)",
+   "defender: skipped an unreadable entry in the die-2 row",
+   "defender: skipped an unreadable entry in the die-2 row",
+   "defender: skipped an unreadable entry in the die-2 row",
+   "defender: skipped an unreadable entry in the die-3 row"
+  ],
+  "matches_truth": false
+ },
+ "source": {
+  "game_id": "1795422718888",
+  "target": "anhwei"
+ }
+}
