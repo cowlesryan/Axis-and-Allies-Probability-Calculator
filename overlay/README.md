@@ -33,7 +33,7 @@ overlay appears beside the panel. Hotkeys (polled, so the game still gets its ke
 | Ctrl+Alt+F10 | force a re-read of the panel |
 | Ctrl+Alt+F12 | quit |
 
-Options: `--interval 0.4` (seconds between reads), `--exact-seconds 8` (exact-solve
+Options: `--interval 0.4` (seconds between reads), `--exact-seconds 3` (exact-solve
 budget before falling back to a Monte Carlo estimate),
 `--image FILE` (read a saved screenshot instead of the screen), `--debug`,
 `--no-exclude` (let screenshots include the overlay; only for verification).
@@ -157,3 +157,12 @@ translations) and stores the bundled dataset with lossless maximum PNG compressi
 size is about 217 MB and the installer about 69 MB. `tests/test_frozen.py` guards this: it runs the app's own
 `--selftest` (OpenCV, NumPy, Qt, calculator, reader, Teach gate) from the exe, the installed app and the source tree and
 requires identical results, runs the exe on real frames, and checks that nothing needed was removed.
+
+## Performance
+The overlay is a background helper, so it runs at below-normal CPU priority (`--normal-priority` turns that off) and
+keeps its work small: once the attack panel has been read, only the small screen area around it is checked (about 9 ms
+instead of about 70 ms) and the panel is read again only when those pixels change; with no panel on screen it looks
+every 0.8 s instead of every 0.4 s; the casualty-choice comparison starts only after the setup has been left alone for
+1.5 s (with a 1 s budget per solve) and is dropped if the setup changes; the exact solve gets 3 s before falling back to
+a Monte Carlo estimate (capped at 2 s). `--perf` prints per-stage timings, CPU use and the worst GUI delay every 5
+seconds (to the log file in the installed app). `tests/test_perf.py` guards all of this.

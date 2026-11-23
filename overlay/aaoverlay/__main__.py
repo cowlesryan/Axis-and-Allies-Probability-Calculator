@@ -49,7 +49,10 @@ def main():
     from .app import run
     ap = argparse.ArgumentParser(description="Battle-odds overlay for Axis & Allies 1942 Online")
     ap.add_argument("--interval", type=float, default=0.4, help="seconds between screen reads")
-    ap.add_argument("--exact-seconds", type=float, default=8.0, help="exact-solve budget before estimating")
+    ap.add_argument("--exact-seconds", type=float, default=3.0, help="exact-solve budget before estimating")
+    ap.add_argument("--perf", action="store_true", help="print timing, CPU use and GUI stalls every 5 seconds")
+    ap.add_argument("--normal-priority", action="store_true",
+                    help="do not lower the overlay's CPU priority (it runs below normal so the game comes first)")
     ap.add_argument("--collect", action="store_true",
                     help="keep panels the reader cannot read for the Teach window (Ctrl+Alt+F7); stays on this PC")
     ap.add_argument("--image", default=None, help="read this screenshot instead of the live screen (testing)")

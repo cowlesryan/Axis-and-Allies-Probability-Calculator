@@ -22,6 +22,11 @@ from aa1942.units import (ART, BB, BBD, CRU, INF, SEA_IDX, TANK, army_cost, fmt_
 QUICK_SIM_SECONDS = 1.0
 SPREAD_AFTER_EXACT_SECONDS = 1.0
 SPREAD_BUDGET_SECONDS = 4.0
+SIM_FALLBACK_SECONDS = 2.0   # cap on the Monte Carlo fallback (the exact attempt has already used its budget)
+# The live overlay shows the casualty-choice comparison only after the setup has been left alone for a moment, and
+# with a short budget per solve: it is an extra, and it used to burn up to 8 s of CPU on every new battle.
+LIVE_SPREAD_DELAY_SECONDS = 1.5
+LIVE_SPREAD_BUDGET_SECONDS = 1.0
 
 
 def request_cancel():
@@ -109,8 +114,12 @@ def compute_amphibious(att, dfn, split, emit, exact_seconds=8.0, pa=STANDARD, pd
     return out
 
 
-def compute(att, dfn, emit, exact_seconds=8.0, att_policy=STANDARD, def_policy=STANDARD):
+def compute(att, dfn, emit, exact_seconds=8.0, att_policy=STANDARD, def_policy=STANDARD,
+            spread_delay=0.0, spread_budget=SPREAD_BUDGET_SECONDS):
     """Compute and emit progressively better results. Returns the last emitted dict.
+
+    ``spread_delay`` waits that long (abandoning the comparison if the job is cancelled meanwhile) before the
+    casualty-choice comparison starts; ``spread_budget`` is the time limit of each of its solves.
 
     ``att_policy`` / ``def_policy`` are casualty policies (see ``solver.parse_policy``). Simulation only knows
     the standard policy, so with another policy there is no quick estimate and, if the battle is too large
@@ -140,7 +149,8 @@ def compute(att, dfn, emit, exact_seconds=8.0, att_policy=STANDARD, def_policy=S
         try:
             res = solve(att, dfn, att_policy, def_policy, time_limit=exact_seconds)
         except SolveBudgetExceeded:
-            more = simulate(att, dfn, runs=20000, max_seconds=exact_seconds, should_stop=stop)
+            more = simulate(att, dfn, runs=20000, max_seconds=min(exact_seconds, SIM_FALLBACK_SECONDS),
+                            should_stop=stop)
             if cancel_event.is_set():
                 return out
             out.update(stage="final", method="estimate", outcomes=_outcomes(more),
@@ -158,10 +168,12 @@ def compute(att, dfn, emit, exact_seconds=8.0, att_policy=STANDARD, def_policy=S
 
         # Stage 3: casualty-choice sensitivity (only if cheap).
         if took <= SPREAD_AFTER_EXACT_SECONDS and not custom:
+            if spread_delay and cancel_event.wait(spread_delay):
+                return out  # the setup changed while waiting: a newer job replaces this one
             spread = {"standard": res["attacker_win"]}
             for label, pa, pd in (("attacker_optimal", OPTIMAL, STANDARD), ("defender_optimal", STANDARD, OPTIMAL)):
                 try:
-                    spread[label] = solve(att, dfn, pa, pd, time_limit=SPREAD_BUDGET_SECONDS)["attacker_win"]
+                    spread[label] = solve(att, dfn, pa, pd, time_limit=spread_budget)["attacker_win"]
                 except SolveBudgetExceeded:
                     spread[label] = None
             out.update(stage="final", spread=spread)
