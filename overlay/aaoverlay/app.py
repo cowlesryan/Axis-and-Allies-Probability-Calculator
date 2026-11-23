@@ -54,11 +54,13 @@ class ReaderThread(QThread):
     """Reads the attack panel from the live screen (or a fixed image for tests)."""
     reading = Signal(object)
 
-    IDLE_INTERVAL = 0.8   # with no panel on screen for a while the screen is looked at less often
-    IDLE_AFTER = 5        # consecutive reads without a panel before slowing down
-    SAME_PIXELS = 2       # the panel region counts as unchanged when no pixel differs by more than this
+    SAME_PIXELS = 2       # the panel itself counts as unchanged when no pixel differs by more than this
+    REGION_SIDE, REGION_TOP, REGION_BOTTOM = 200, 200, 400   # extra area watched around the panel (1440p pixels)
+    RING_DIFF = 24        # in that margin a pixel counts as changed when a channel differs by more than this ...
+    RING_FRACTION = 0.004  # ... and the margin as changed when more than this fraction of it did
+    CONFIRM_WAIT = 0.03   # a new or changed panel is read again almost at once: the overlay acts on two agreeing reads
 
-    def __init__(self, interval=0.6, image_path=None, debug=False, perf=None):
+    def __init__(self, interval=0.2, image_path=None, debug=False, perf=None):
         super().__init__()
         self.interval, self.image_path, self.debug, self.perf = interval, image_path, debug, perf
         self.force = threading.Event()
@@ -67,23 +69,46 @@ class ReaderThread(QThread):
     def _timed(self, name):
         return self.perf.timer(name) if self.perf else contextlib.nullcontext()
 
-    @staticmethod
-    def _region(shot_shape, mon, panel):
-        """The screen rectangle (monitor-local ``(x0, y0, x1, y1)`` and global ``mss`` dict) of ``panel``."""
-        s = shot_shape[0] / panel.frame.shape[0]
-        x0, y0, x1, y1 = (int(v * s) for v in W.crop_box(panel.frame, panel))
-        x1, y1 = min(x1, shot_shape[1]), min(y1, shot_shape[0])
+    @classmethod
+    def _region(cls, shot_shape, mon, panel):
+        """What to watch once ``panel`` is known: ``(box, rect, core)``.
+
+        ``box`` is the monitor-local screen rectangle ``(x0, y0, x1, y1)``, ``rect`` the same as a global ``mss`` dict
+        and ``core`` the panel itself (title, rows, buttons) relative to ``box``. The box reaches well beyond the
+        panel (``REGION_SIDE`` / ``REGION_TOP`` / ``REGION_BOTTOM`` px at 1440p) so a panel that grows, the lists and
+        buttons around it, or anything else that touches the combat data is seen.
+        """
+        fh, fw = panel.frame.shape[:2]
+        cx0, cy0, cx1, cy1 = W.crop_box(panel.frame, panel)
+        bx0, by0 = max(0, cx0 - cls.REGION_SIDE), max(0, cy0 - cls.REGION_TOP)
+        bx1, by1 = min(fw, cx1 + cls.REGION_SIDE), min(fh, cy1 + cls.REGION_BOTTOM)
+        s = shot_shape[0] / fh
+        x0, y0 = int(bx0 * s), int(by0 * s)
+        x1, y1 = min(int(bx1 * s), shot_shape[1]), min(int(by1 * s), shot_shape[0])
+        core = (int(cx0 * s) - x0, int(cy0 * s) - y0, min(int(cx1 * s), x1) - x0, min(int(cy1 * s), y1) - y0)
         return (x0, y0, x1, y1), {"left": mon["left"] + x0, "top": mon["top"] + y0, "width": x1 - x0,
-                                  "height": y1 - y0}
+                                  "height": y1 - y0}, core
+
+    def _same_region(self, now, before, core):
+        """No change that matters: the panel itself is pixel-identical (within ``SAME_PIXELS``), and the margin
+        around it has at most a sprinkle of changed pixels (the map behind it animates)."""
+        if now.shape != before.shape:
+            return False
+        diff = cv2.absdiff(now, before)
+        cx0, cy0, cx1, cy1 = core
+        if int(diff[cy0:cy1, cx0:cx1].max()) > self.SAME_PIXELS:
+            return False
+        diff[cy0:cy1, cx0:cx1] = 0
+        ring = diff.size - 3 * (cx1 - cx0) * (cy1 - cy0)
+        return np.count_nonzero(diff > self.RING_DIFF) <= self.RING_FRACTION * max(ring, 1)
 
     def _unchanged_panel(self, sct, cached):
         """The previous panel when the pixels around it are unchanged (so reading it again would give the same
         answer), else ``None``. Costs one small grab instead of a full-screen grab and read."""
-        panel, rect, pixels = cached
+        panel, rect, pixels, core = cached
         with self._timed("region"):
             try:
-                now = np.array(sct.grab(rect))[:, :, :3]
-                same = now.shape == pixels.shape and int(cv2.absdiff(now, pixels).max()) <= self.SAME_PIXELS
+                same = self._same_region(np.array(sct.grab(rect))[:, :, :3], pixels, core)
             except Exception as exc:  # the shortcut failing must only cost speed: read the whole screen instead
                 print(f"[reader] region check failed: {exc!r}", file=sys.stderr)
                 same = False
@@ -95,9 +120,12 @@ class ReaderThread(QThread):
         fixed = cv2.imread(self.image_path) if self.image_path else None
         sct = None if fixed is not None else mss.mss()
         cached = None        # (panel, global grab rect, its pixels) of the last live panel
-        no_panel_streak = 0
+        last_sig = None      # signature of the previous reading (None while no panel was seen)
+        winmm = ctypes.windll.winmm
+        winmm.timeBeginPeriod(1)   # 1 ms timer resolution: Windows' 15.6 ms steps would stretch a 0.2 s interval
         try:
             while not self.isInterruptionRequested():
+                tick = time.monotonic()
                 if self.reload.is_set():
                     store.load()
                     self.reload.clear()
@@ -121,29 +149,30 @@ class ReaderThread(QThread):
                         print(f"[reader] {'panel' if panel else 'no panel'} in {1000 * (time.monotonic() - t0):.0f} ms")
                     if panel is not None and fixed is None:
                         try:
-                            (x0, y0, x1, y1), rect = self._region(shot.shape, sct.monitors[1], panel)
-                            cached = (panel, rect, shot[y0:y1, x0:x1].copy())
+                            (x0, y0, x1, y1), rect, core = self._region(shot.shape, sct.monitors[1], panel)
+                            cached = (panel, rect, shot[y0:y1, x0:x1].copy(), core)
                         except Exception:  # no region, no shortcut: every tick reads the whole screen as before
                             cached = None
                 elif self.debug:
                     print("[reader] panel region unchanged")
                 self.reading.emit(panel)
-                no_panel_streak = 0 if panel is not None else no_panel_streak + 1
-                wait = self.idle_interval() if no_panel_streak >= self.IDLE_AFTER else self.interval
-                waited = 0.0
-                while waited < wait and not self.force.is_set() and not self.isInterruptionRequested():
-                    self.msleep(30)
-                    waited += 0.03
+                sig = panel.signature() if panel is not None else None
+                # The next check is due ``interval`` after the start of this one (or very soon, to confirm a new or
+                # changed panel), but never immediately: other threads need the CPU too.
+                due = max(tick + (self.CONFIRM_WAIT if sig is not None and sig != last_sig else self.interval),
+                          time.monotonic() + 0.005)
+                last_sig = sig
+                while not self.isInterruptionRequested():
+                    remaining = due - time.monotonic()
+                    if remaining <= 0 or self.force.wait(min(remaining, 0.02)):
+                        break
                 if self.force.is_set():
                     cached = None  # F10: read the whole screen again
-                    no_panel_streak = 0
                 self.force.clear()
         finally:
+            winmm.timeEndPeriod(1)
             if sct is not None:
                 sct.close()
-
-    def idle_interval(self):
-        return max(self.interval, self.IDLE_INTERVAL)
 
 
 class SolverThread(QThread):
@@ -187,7 +216,8 @@ class SolverThread(QThread):
 
                 service.compute(att, dfn, emit, exact_seconds=self.exact_seconds,
                                 spread_delay=service.LIVE_SPREAD_DELAY_SECONDS,
-                                spread_budget=service.LIVE_SPREAD_BUDGET_SECONDS)
+                                spread_budget=service.LIVE_SPREAD_BUDGET_SECONDS,
+                                quick_exact=service.LIVE_QUICK_EXACT_SECONDS)
             except Exception as exc:  # e.g. a reading the calculator rejects: say so, and keep the thread alive
                 self.result.emit({"job": job_id, "error": str(exc) or type(exc).__name__, "outcomes": None})
 

@@ -33,7 +33,7 @@ overlay appears beside the panel. Hotkeys (polled, so the game still gets its ke
 | Ctrl+Alt+F10 | force a re-read of the panel |
 | Ctrl+Alt+F12 | quit |
 
-Options: `--interval 0.4` (seconds between reads), `--exact-seconds 3` (exact-solve
+Options: `--interval 0.2` (seconds between reads), `--exact-seconds 3` (exact-solve
 budget before falling back to a Monte Carlo estimate),
 `--image FILE` (read a saved screenshot instead of the screen), `--debug`,
 `--no-exclude` (let screenshots include the overlay; only for verification).
@@ -160,9 +160,21 @@ requires identical results, runs the exe on real frames, and checks that nothing
 
 ## Performance
 The overlay is a background helper, so it runs at below-normal CPU priority (`--normal-priority` turns that off) and
-keeps its work small: once the attack panel has been read, only the small screen area around it is checked (about 9 ms
-instead of about 70 ms) and the panel is read again only when those pixels change; with no panel on screen it looks
-every 0.8 s instead of every 0.4 s; the casualty-choice comparison starts only after the setup has been left alone for
-1.5 s (with a 1 s budget per solve) and is dropped if the setup changes; the exact solve gets 3 s before falling back to
-a Monte Carlo estimate (capped at 2 s). `--perf` prints per-stage timings, CPU use and the worst GUI delay every 5
-seconds (to the log file in the installed app). `tests/test_perf.py` guards all of this.
+keeps its work small while checking the screen every 0.2 s (`--interval`, measured from the start of one check to the
+start of the next):
+
+* **Finding the panel is fast.** With no panel on screen a check costs about 45 ms (a full-screen grab and a 12 ms
+  search for the panel's centre line, down from 24 ms). A new or changed panel is read a second time about 30 ms
+  later instead of a whole interval later, since the overlay acts on two agreeing reads, so it shows within roughly
+  0.2 s of the panel opening.
+* **Watching a panel is cheap.** Once the attack panel is read, only a wide area around it is grabbed (the panel plus
+  200 px each side and above and 400 px below, at 1440p, so a panel that grows by several rows or the buttons and
+  lists around it are noticed). The panel itself must be pixel-identical; the margin may have a few animated pixels
+  (the map behind it moves) but not a real change. If so the panel is not read again.
+* **Answers come sooner.** Most battles are solved exactly in a tenth of a second, so the rough estimate step is
+  skipped for them. The casualty-choice comparison starts only after the setup has been left alone for 1.5 s (1 s per
+  solve) and is dropped if the setup changes. A battle too large to solve in 3 s falls back to a Monte Carlo estimate
+  (capped at 2 s).
+
+`--perf` prints per-stage timings, CPU use and the worst GUI delay every 5 seconds (to the log file in the installed
+app). `tests/test_perf.py` guards all of this, including that the faster panel search finds exactly what the old one did.

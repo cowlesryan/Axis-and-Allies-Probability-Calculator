@@ -111,36 +111,45 @@ def normalize(img):
     return cv2.resize(img, (round(w * BASE_H / h), BASE_H), interpolation=cv2.INTER_AREA)
 
 
-def find_thin_lines(img, run=14):
+_FLANKS = np.array([[1, 1, 0, 0, 0, 0, 0, 1, 1]], np.float32)   # columns 4 and 3 to the left, 3 and 4 to the right
+
+
+def vivid_mask(img):
+    """``(mask, x0)``: pixels with saturation > 150 and value > 140 (0 / 255) in the strip of the frame where a
+    centre line can be (columns 10%..90%, rows 100..1400); ``x0`` is the strip's first column. Both line finders
+    need it, so ``locate_rows`` computes it once."""
+    w = img.shape[1]
+    x0, x1 = int(w * 0.1), int(w * 0.9)
+    hsv = cv2.cvtColor(img[100:1400, x0:x1], cv2.COLOR_BGR2HSV)
+    return cv2.inRange(hsv, (0, 151, 141), (180, 255, 255)), x0
+
+
+def find_thin_lines(img, run=14, vivid=None):
     """Left columns of isolated 2-3px wide vivid vertical lines at least ``run`` px tall.
 
     For short centre lines (a one-row panel), where the clustering in ``find_dividers`` is thrown off by
     saturated map regions touching the line's columns: here each pixel must be flanked by non-vivid ones.
     """
-    h, w = img.shape[:2]
-    x0, x1 = int(w * 0.1), int(w * 0.9)
-    hsv = cv2.cvtColor(img[100:1400, x0:x1], cv2.COLOR_BGR2HSV)
-    m = (hsv[..., 1] > 150) & (hsv[..., 2] > 140)
-    n = m.shape[1]
-    # centre column c of a line 1-3 px wide: vivid, with the columns 3 and 4 px to either side clear
-    out = np.zeros_like(m)
-    out[:, 4:n - 4] = m[:, 4:n - 4] & ~m[:, 1:n - 7] & ~m[:, 0:n - 8] & ~m[:, 7:n - 1] & ~m[:, 8:n]
-    line = cv2.erode(out.astype(np.uint8), np.ones((run, 1), np.uint8))
-    cols = [int(c) + x0 - 1 for c in np.where(line.sum(axis=0) > 0)[0]]  # left column of a 3px line
+    mask, x0 = vivid if vivid is not None else vivid_mask(img)
+    # centre column c of a line 1-3 px wide: vivid, with the columns 3 and 4 px to either side clear. The flank test
+    # is one filter (the mask is 0 / 255 and sums saturate, so a flank is 255 if any of its four pixels is vivid).
+    flank = cv2.filter2D(mask, -1, _FLANKS, borderType=cv2.BORDER_CONSTANT)
+    out = cv2.subtract(mask, flank)
+    out[:, :4] = 0       # the test only applies where all four flank columns exist
+    out[:, -4:] = 0
+    line = cv2.erode(out, np.ones((run, 1), np.uint8))
+    cols = [int(c) + x0 - 1 for c in np.where(line.any(axis=0))[0]]  # left column of a 3px line
     return [c for i, c in enumerate(cols) if i == 0 or c != cols[i - 1] + 1]  # one candidate per run of columns
 
 
-def find_dividers(img, run=60):
+def find_dividers(img, run=60, vivid=None):
     """Left columns of every thin, tall, vividly coloured vertical line (centre-line candidates).
 
     A two-row panel's line is cut in two by the "VS" label, so runs only need to be
     ~60px tall. Thin (<= 6px wide) clusters only, since map regions are wide. Each
     candidate is later checked against the bars and dice, so false candidates are harmless.
     """
-    h, w = img.shape[:2]
-    x0, x1 = int(w * 0.1), int(w * 0.9)
-    hsv = cv2.cvtColor(img[100:1400, x0:x1], cv2.COLOR_BGR2HSV)
-    sat = ((hsv[..., 1] > 150) & (hsv[..., 2] > 140)).astype(np.uint8)
+    sat, x0 = vivid if vivid is not None else vivid_mask(img)
     line = cv2.erode(sat, np.ones((run, 1), np.uint8))  # keep only tall vertical runs
     cols = np.where(line.sum(axis=0) > 0)[0]
     clusters, start, prev = [], None, None
@@ -367,8 +376,9 @@ def locate_rows(img):
     """Find the panel and return ``(cx, [RowGeom])``; ``(None, [])`` if no panel."""
     # A one-row panel's centre line is only two stubs (above and below the row), so a second pass accepts
     # short runs. Candidates are validated against the bars and dice, so extra candidates are harmless.
-    cands = find_dividers(img)
-    short = [c for c in find_thin_lines(img) if c not in cands]
+    vivid = vivid_mask(img)
+    cands = find_dividers(img, vivid=vivid)
+    short = [c for c in find_thin_lines(img, vivid=vivid) if c not in cands]
     cands += short
     best_cx, best_rows = None, []
     for cx in cands:
