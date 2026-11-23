@@ -27,7 +27,6 @@ SIM_FALLBACK_SECONDS = 2.0   # cap on the Monte Carlo fallback (the exact attemp
 # with a short budget per solve: it is an extra, and it used to burn up to 8 s of CPU on every new battle.
 LIVE_SPREAD_DELAY_SECONDS = 1.5
 LIVE_SPREAD_BUDGET_SECONDS = 1.0
-LIVE_QUICK_EXACT_SECONDS = 0.15
 
 
 def request_cancel():
@@ -116,10 +115,8 @@ def compute_amphibious(att, dfn, split, emit, exact_seconds=8.0, pa=STANDARD, pd
 
 
 def compute(att, dfn, emit, exact_seconds=8.0, att_policy=STANDARD, def_policy=STANDARD,
-            spread_delay=0.0, spread_budget=SPREAD_BUDGET_SECONDS, quick_exact=0.0):
+            spread_delay=0.0, spread_budget=SPREAD_BUDGET_SECONDS):
     """Compute and emit progressively better results. Returns the last emitted dict.
-
-    ``quick_exact`` (seconds) first tries an exact solve that short, skipping the rough estimate when it succeeds.
 
     ``spread_delay`` waits that long (abandoning the comparison if the job is cancelled meanwhile) before the
     casualty-choice comparison starts; ``spread_budget`` is the time limit of each of its solves.
@@ -136,42 +133,33 @@ def compute(att, dfn, emit, exact_seconds=8.0, att_policy=STANDARD, def_policy=S
     out = _base(att, dfn)
     stop = cancel_event.is_set
     try:
-        res, t0 = None, time.monotonic()
-        # Stage 0: most battles solve exactly in well under a tenth of a second, faster than a simulation would
-        # give its rough first answer, so try that first (the work done is kept for the full solve if it fails).
-        if quick_exact and not custom:
-            try:
-                res = solve(att, dfn, att_policy, def_policy, time_limit=quick_exact)
-            except SolveBudgetExceeded:
-                pass
-        if res is None:
-            # Stage 1: quick estimate (standard policy only).
-            if not custom:
-                est = simulate(att, dfn, runs=2000, seed=None, max_seconds=QUICK_SIM_SECONDS, should_stop=stop)
-                if cancel_event.is_set():
-                    return out
-                out.update(stage="estimate", method="estimate", outcomes=_outcomes(est),
-                           stderr=est["stderr"], runs=est["runs"])
-                emit(dict(out))
-            else:
-                emit(dict(out))
-
-            # Stage 2: exact solve under a budget.
-            t0 = time.monotonic()
-            try:
-                res = solve(att, dfn, att_policy, def_policy, time_limit=exact_seconds)
-            except SolveBudgetExceeded:
-                more = simulate(att, dfn, runs=20000, max_seconds=min(exact_seconds, SIM_FALLBACK_SECONDS),
-                                should_stop=stop)
-                if cancel_event.is_set():
-                    return out
-                out.update(stage="final", method="estimate", outcomes=_outcomes(more),
-                           stderr=more["stderr"], runs=more["runs"])
-                out["notes"].append(f"Battle too large for an exact answer in {exact_seconds:g}s: Monte Carlo estimate.")
-                if custom:
-                    out["notes"].append("The estimate uses the standard casualty policy (simulation supports no other).")
-                emit(dict(out))
+        # Stage 1: quick estimate (standard policy only).
+        if not custom:
+            est = simulate(att, dfn, runs=2000, seed=None, max_seconds=QUICK_SIM_SECONDS, should_stop=stop)
+            if cancel_event.is_set():
                 return out
+            out.update(stage="estimate", method="estimate", outcomes=_outcomes(est),
+                       stderr=est["stderr"], runs=est["runs"])
+            emit(dict(out))
+        else:
+            emit(dict(out))
+
+        # Stage 2: exact solve under a budget.
+        t0 = time.monotonic()
+        try:
+            res = solve(att, dfn, att_policy, def_policy, time_limit=exact_seconds)
+        except SolveBudgetExceeded:
+            more = simulate(att, dfn, runs=20000, max_seconds=min(exact_seconds, SIM_FALLBACK_SECONDS),
+                            should_stop=stop)
+            if cancel_event.is_set():
+                return out
+            out.update(stage="final", method="estimate", outcomes=_outcomes(more),
+                       stderr=more["stderr"], runs=more["runs"])
+            out["notes"].append(f"Battle too large for an exact answer in {exact_seconds:g}s: Monte Carlo estimate.")
+            if custom:
+                out["notes"].append("The estimate uses the standard casualty policy (simulation supports no other).")
+            emit(dict(out))
+            return out
         took = time.monotonic() - t0
         la, ld = _losses(att, dfn, res["final_states"])
         out.update(stage="exact", method="exact", outcomes=_outcomes(res), stderr=None, runs=None,
